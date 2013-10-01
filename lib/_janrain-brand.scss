@@ -1,0 +1,650 @@
+@import "bourbon/bourbon";
+@import "_janrain-mixins";
+
+// Global Navigation - used across all Janrain sites
+.global_nav {
+	width: 100%;
+    @include box-sizing( border-box );
+    padding: 0 1em;
+    background-color: $slate;
+	.home_link {
+		display: block;
+		float: left;
+        width: 90px;
+		height: 45px;
+        line-height: 45px;
+        background: image-url('logo.png') center no-repeat;
+		@media
+		only screen and (-webkit-min-device-pixel-ratio: 1.1),
+		only screen and (min-resolution: 100dpi) {
+            background: image-url('logo_2x.png') center no-repeat;
+            background-size: 90px 28px;
+		}
+        overflow: hidden;
+        text-indent: 100%;
+    }
+    .nav_link {
+        display: none;
+    }
+	.nav-list {
+        @include ul(none, 0, auto);
+		height: 45px;
+		text-align: right;
+		> li {
+            display: block;
+            float: right;
+            line-height: 45px;
+			vertical-align: middle;
+			text-transform: uppercase;
+            &.profile {
+                background: $slate-alt;
+                text-transform: none;
+                > a { 
+					font-size: 15px;
+                    padding: 0 .5em;
+                }
+                .avatar { margin-right: .5em; }
+            }
+            &.dropdown {
+                a:after {
+                    display: none;
+                }
+                &.selected .subnav {
+                    display: block;
+                    width: 150px;
+                }
+            }
+		}
+		> li > a {
+			color: #929FB2;
+			display: block;
+			padding: 0 1em;
+            font-size: 13px;
+			font-weight: 400;
+			&:hover {
+				color: $white;
+			}
+			&.selected {
+				color: white;
+				font-weight: normal;
+			}
+		}
+	}
+    .subnav {
+        left: 0;
+        right: auto;
+        &:before {
+            left: 15px;
+            right: auto;
+        }
+    }
+}
+
+/* 
+ * The default and admin navigation bar that goes under the global nav
+ *
+ * Each site should have a main_nav element for orienting and wayfinding.
+ * It is expected that a .nav_bar will hold either a .main_nav list, OR a
+ * .breadcrumbs trail, but NOT both.
+ *
+ * Other wayfinding elements (search bar, sitemap, etc) can also go into the
+ * nav_bar element, and should be placed inside the .nav_assist div which
+ * floats right by default.
+ */
+.nav_bar, .mobile_nav {
+	background: $action;
+	position: relative;
+	width: 100%;
+	box-shadow:	inset 0 1px 0px rgba(255,255,255,.2),
+                0 1px 1px rgba(0,0,0,.2);
+
+	// Color overrides for elements which can appear elsewhere with different color backgrounds
+	.breadcrumbs li {
+        color: $sky-alt; 
+		a, a:link, a:hover { 
+			color: $white; 
+			&:after {
+				border-color: $sky;
+			}
+		}
+		&:last-child a { color: $sky-alt; }
+	}
+}
+
+.mobile_nav { @extend .visible-xs; }
+
+/*
+ * A sidebar navigation column, where it is appropriate
+ *
+ * Can hold different types of navigation, but should provide consistant
+ * styling across different sites.
+ *
+ * This element floats left
+ */
+.sidebar_col {
+	height: 100%;
+	min-height: 100%;
+	min-height: calc(100% - 90px);
+	width: 300px;
+	position: fixed;
+	background: $sky-light;
+    overflow-x: hidden;
+}
+
+.upstream_nav {
+    display: inline-block;
+    position: fixed;
+    z-index: 10;
+    width: 256px;
+    left: -256px;
+    @include transition( all .25s ease-in );
+
+    &.focused {
+        left: 0;
+        box-shadow: 1em 0 2em fade-out( $black, .7 );
+    }
+
+    min-height: 100%;
+    height: 100%;
+
+    background: $sky;
+    border-right: 1px solid darken( $sky, 6 );
+
+    ul {
+        margin: 1em 0;
+        padding: 0;
+        border-top: 1px solid darken( $sky, 6 );
+
+        li {
+            display: block;
+            border-bottom: 1px solid darken( $sky, 6 );
+            box-shadow: inset 1px 1px 1px lighten( $sky, 6 );
+
+            a {
+                display: block;
+                padding: .5em 1em;
+                color: $river-gray;
+                &:hover {
+                    background: darken( $sky, 3 );
+                }
+            }
+            
+            &.selected {
+                background: darken( $sky, 6 );
+                box-shadow: inset -1px -1px 1px darken( $sky, 9 );
+
+                a {
+                    cursor: default;
+                    color: $gray-darker;
+                    font-weight: 600;
+                    &:hover {
+                        background: inherit;
+                    }
+                }
+            }
+       }
+    }
+
+}
+
+.sidebar_nav {
+    margin: 1em 0;
+    padding: 0;
+    display: block;
+    width: 100%;
+    line-height: 1;
+    border-top: 1px solid $gray-lighter;
+
+    .category-title {
+        font-size: .9em;
+        line-height: 1.75;
+        margin: 0;
+        padding: 0 16px;
+        background: $sky;
+        border-bottom: 1px solid $gray-lighter;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        @include box-sizing(border-box); 
+    }
+
+    li {
+        margin: 0;
+        padding:0;
+        border-bottom:1px solid $gray-lighter;
+
+        > a {
+            display: block;
+            padding: .5em 1em;
+            box-sizing: border-box;
+            color: $river-gray;
+            font-weight: 400;
+            &:hover {
+                background: fade-out($white, .6);
+            }
+            &[href] {
+                color: $river-blue;
+            }
+        }
+        &.last {
+            border-bottom:none;
+        }
+    }
+
+    .icon-navigation {
+        color: $gray-light;
+        font-size: 16px;
+        vertical-align: bottom;
+        text-decoration: none;
+        margin-right: .5em;
+    }
+
+    .selected {
+        > a, > a:hover {
+            @include linear-gradient(to bottom, $white, $gray-lighter);
+            color: $gray-darker;
+        }
+    }
+
+    .dropdown {
+        position: relative;
+        > a { 
+            cursor: pointer; 
+            &:after {
+                padding: .5em 1em;
+                float: right;
+                margin: -.5em -1em;
+                vertical-align: top;
+                height: 100%;
+            }
+        }
+    }
+
+    .children {
+        display: none;
+        margin: 0;
+        padding: 0;
+
+    }
+
+    .expanded {
+        > a, > a:hover {
+            @include linear-gradient(to bottom, $white, $gray-lighter);
+            &:after {
+                background: white;
+                color: $river-gray;
+                cursor: pointer;
+            }
+        }
+
+        > .children, > .subpagenav, + .children, + .subpagenav {
+            display: block;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            background:$white;
+            font-size: 0.9em;
+            padding: 0 1em;
+            border-bottom:none;
+
+            li {
+
+                padding: .25em;
+
+                &.selected, &.current_page_item {
+
+                    a {
+                        color: $slate; 
+                        font-weight: 700;
+                        padding: none;
+                    }
+                    .subpagenav a{font-weight:400;}
+
+                }
+
+                &:last-child {
+                    border-bottom: none;
+                }
+            }
+
+            a {
+                color: $action;
+                padding: 0;
+                background:none;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+
+        }
+    }
+
+    @include transition( margin 0.25s ease-in );
+
+    &:after {
+        content: " ";
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 15em;
+        bottom: -15em;
+        @include linear-gradient( to bottom, $sky-light, $white );
+    }
+
+}
+
+.upstream_nav.focused ~ .sidebar_nav {
+    margin-left: 256px;
+}
+
+.sidebar-header {
+    font-size: 18px;
+    line-height: 40px;
+    height: 40px;
+    font-weight: 600;
+    color: $gray-darker;
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+    border-bottom: 1px solid $gray-lighter;
+    
+    button {
+        display: inline-block;
+        vertical-align: middle;
+        background: transparent;
+        padding: .75em 1em;
+        margin: 0 .25em 0 0;
+        border-right: 1px solid $gray-lighter;
+        &:hover {
+            background: fade-out($white, .6);
+        }
+        cursor: pointer;
+    }
+
+    span {
+        display: inline-block;
+        vertical-align: middle;
+        &:first-child {
+            margin-left: 1em;
+        }
+    }
+}
+
+.body_col {
+	position: relative;
+	overflow: hidden;
+	padding: 16px;
+	@include box-sizing(border-box);
+	min-height: 100%;
+	min-height: calc(100% - 90px);
+	margin-left: 300px;
+    border-left: 1px solid $gray-lighter;
+}
+
+.selected .subnav {
+  display: block;
+  position: absolute;
+}
+
+.subnav {
+  display: none;
+  @include ul (none, 7px 0, 0);
+  background: $river-blue none;
+  border-radius: 5px;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 9999999;
+  width: 175px;
+  text-align: left;
+  > li > a {
+    color: $sky-alt;
+    display: block;
+    padding: 5px 10px;
+    text-transform: capitalize;
+    &:hover {
+      @include hover-transition;
+      color: $white;
+      background: $river-blue;
+    }
+  }
+  .selected a {
+    background: $river-blue;
+  }
+  .selected a:before {
+    content: '\2192\00a0';
+  }
+  &:before {
+      font-size: 24px;
+      position: absolute;
+      right: 11px;
+      width: 24px;
+      height: 24px;
+      color: $river-blue;
+      z-index: 1;
+      top: -8px;
+  }
+}
+
+/* Main navigation add-on for inside a .nav_bar div */
+
+.main_nav {
+	@include ul(none, 0, auto);
+	float: left;
+	@include inline-block;
+	> li {
+		@include inline-block;
+		white-space: nowrap;
+		> a {
+			font-size: 15px;
+			padding: 0 15px;
+			height: 45px;
+			line-height: 45px;
+			vertical-align: middle;
+			display: block;
+			text-decoration: none;
+			font-weight: 300;
+			.icon {
+				float: left;
+				margin: 0px 5px 0 0;
+			}
+			&:visited, &:link {
+				color: $sky-alt;
+			}
+			&:hover {
+				color: $white;
+			}
+		}
+		&.selected > a, &.active > a {
+			background: rgba(0,0,0,.15);
+			box-shadow: inset 0 0 3px rgba(26, 44, 58, .25);
+			color: $white;
+			@include transition( background 0.2s );
+			position: relative;
+			&:hover {
+			}
+            &.selected > a:before {
+                background-image: none;
+            }
+		}
+	}
+}
+
+//Breadcrumbs
+.breadcrumbs {
+    height: 45px;
+	line-height: 45px;
+	@include ul(none, 0, 0);
+	@include font-size(14px);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+	li {
+		height: 45px;
+		line-height: 45px;
+		display: block;
+		float: left;
+		padding: 0 1em;
+		&:last-child a {
+			color: lighten($slate, 40);
+			cursor: default;
+			&:hover {
+				text-decoration: none;
+			}
+			&:after {
+				display: none;
+			}
+		}
+	}
+	a {
+		display: block;
+		height: 45px;
+		padding: 0 ;
+		text-decoration: none;
+		position: relative;
+		&:hover {
+			text-decoration: underline;
+		}
+		&:after {
+			content:"";
+			display: block;
+			width: 0.6em;
+			height: 0.6em;
+			position: absolute;
+			right: -1.25em;
+			top: 1.375em;
+			@include rotate(45deg);
+			border-top: 1px solid $slate-alt;
+			border-right: 1px solid $slate-alt;
+		}
+	}
+}
+
+
+.nav-assist {
+	height: 45px;
+	line-height: 45px;
+
+    button {
+        display: inline-block;
+        height: 45px;
+        width: 44px;
+        margin: 0;
+        text-align: center;
+        vertical-align: top;
+        background: $action;
+        font-size: 22px;
+        color: $sky-alt;
+        &:hover {
+            background: fade-out($white, .5);
+        }
+        cursor: pointer;
+        &.active {
+            background: $sky-alt;
+            color: $slate;
+        }
+    }
+
+    input {
+        background: fade-out($black, .8);
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.2) inset, 0 1px rgba(255, 255, 255, 0.2);
+        border-radius: 3px;
+        height: 30px;
+        margin: 0 0 0 .25em;
+        &.active {
+            box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.2), 0 1px rgba(255, 255, 255, 0.2);
+            span { color: $sky; }
+        }
+    }
+}
+
+.nav-button-group { display: inline-block !important; }
+
+.nav-assist-upstream {
+    float: left;
+    border-right: 1px solid fade-out( $sky, .6 );
+}
+
+.nav-assist-utility	{
+    float: right;
+    display: inline-block !important;
+    button {
+        border-left: 1px solid fade-out( $sky, .6 );
+    }
+}
+
+.input-search {
+
+    position: relative;
+    display: inline-block;
+    padding: 0 .5em;
+
+	input[type="search"] {
+		border: medium none;
+		color: $white;
+		@include font-size(14px);
+		width: 240px;
+        height: 30px;
+        padding: 0 .5em;
+	}
+
+    .input-search-submit {
+        width: 32px;
+        height: 45px;
+        margin: 0 0 0 -36px;
+        padding: 0;
+        background: transparent;
+        border: none; 
+        @include font-size(16px);
+        color: $sky-alt;
+        &:hover, &:active {
+            color: $white;
+            background: transparent;
+        }
+    }
+}
+
+
+.tab_bar {
+  height: 50px;
+  margin-bottom: 20px;
+  @include hr;
+  @include font-size(14px);
+  //Matches media query for .wrapper to not require a height.
+  @media screen and (max-width: 960px) {
+    height: auto;
+  }
+  &.dark {
+    box-shadow: 0 1px 0 #21303B,0 2px 0 #3E4D59;
+    .tab_nav a {
+      color: lighten($blue,10%);
+    }
+    .tab_nav .selected a {
+      color: $white;
+      border-bottom: 4px solid $white;
+    }
+  }
+}
+
+/* Miscellany - sort into order as appropriate.
+    (This is stuff that was over-specified before and didn't need to be.)
+*/
+.avatar {
+    height: 24px;
+    width: 24px;
+    padding: 0;
+    border-radius: 3px;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    background: rgba(0,0,0,.2);
+    img {
+        width: 100%;
+        height: auto;
+        margin: 0;
+        vertical-align: top;
+    }
+}

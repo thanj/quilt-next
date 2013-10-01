@@ -69,30 +69,27 @@ module.exports = function(grunt) {
       }
     },
 
-    recess: {
-      options: {
-        compile: true
-      },
+    sass: {
       bootstrap: {
-        src: ['less/bootstrap.less'],
+        src: ['lib/bootstrap.scss'],
         dest: 'dist/css/<%= pkg.name %>.css'
       },
       min: {
         options: {
-          compress: true
+          style: 'compressed'
         },
-        src: ['less/bootstrap.less'],
+        src: ['lib/bootstrap.scss'],
         dest: 'dist/css/<%= pkg.name %>.min.css'
       },
       theme: {
-        src: ['less/theme.less'],
+        src: ['lib/theme.scss'],
         dest: 'dist/css/<%= pkg.name %>-theme.css'
       },
       theme_min: {
         options: {
-          compress: true
+          style: 'compressed'
         },
-        src: ['less/theme.less'],
+        src: ['lib/theme.scss'],
         dest: 'dist/css/<%= pkg.name %>-theme.min.css'
       }
     },
@@ -143,9 +140,9 @@ module.exports = function(grunt) {
         files: '<%= jshint.test.src %>',
         tasks: ['jshint:test', 'qunit']
       },
-      recess: {
-        files: 'less/*.less',
-        tasks: ['recess']
+      sass: {
+        files: 'lib/*.scss',
+        tasks: ['sass']
       }
     }
   });
@@ -162,7 +159,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-html-validation');
   grunt.loadNpmTasks('grunt-jekyll');
-  grunt.loadNpmTasks('grunt-recess');
+  grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('browserstack-runner');
 
   // Docs HTML validation task
@@ -183,7 +180,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-js', ['concat', 'uglify']);
 
   // CSS distribution task.
-  grunt.registerTask('dist-css', ['recess']);
+  grunt.registerTask('dist-css', ['sass']);
 
   // Fonts distribution task.
   grunt.registerTask('dist-fonts', ['copy']);
