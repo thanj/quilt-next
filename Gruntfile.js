@@ -71,26 +71,15 @@ module.exports = function(grunt) {
 
     sass: {
       bootstrap: {
-        src: ['lib/bootstrap.scss'],
+        src: ['lib/quilt.scss'],
         dest: 'dist/css/<%= pkg.name %>.css'
       },
       min: {
         options: {
           style: 'compressed'
         },
-        src: ['lib/bootstrap.scss'],
+        src: ['lib/quilt.scss'],
         dest: 'dist/css/<%= pkg.name %>.min.css'
-      },
-      theme: {
-        src: ['lib/theme.scss'],
-        dest: 'dist/css/<%= pkg.name %>-theme.css'
-      },
-      theme_min: {
-        options: {
-          style: 'compressed'
-        },
-        src: ['lib/theme.scss'],
-        dest: 'dist/css/<%= pkg.name %>-theme.min.css'
       }
     },
 
