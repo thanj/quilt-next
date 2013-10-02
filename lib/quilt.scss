@@ -58,9 +58,10 @@
 
 // Utility classes
 @import "utilities";
-@import "responsive-utilities";
+//@import "responsive-utilities";
 
 // Custom add-ons
 @import "tables-custom";
 @import "type-custom";
 @import "grid-custom";
+@import "responsivity-custom";
