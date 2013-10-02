@@ -14,15 +14,15 @@ th, td {
     table-layout: fixed;
     border-spacing: 0;
 	width: 100%;
-    border: 1px solid $mono-lighter;
+    border: 1px solid $gray-lighter;
 	thead {
-		border-bottom: 1px solid $mono-light;
+		border-bottom: 1px solid $gray-light;
 		th,td {
 			font-size: 1em;
 			font-weight: 700;
 			color: #333;
-            background-color: $mono-light;
-            border-color: $mono-middle;
+            background-color: $gray-light;
+            border-color: $gray;
 		}
 	}
 	tbody {
@@ -31,7 +31,7 @@ th, td {
                 font-weight: 700;
             }
 			td {
-				border-bottom: 1px solid $mono-lighter;
+				border-bottom: 1px solid $gray-lighter;
 				color: #666;
 				font-weight: normal;
 				font-size: 1em;
@@ -78,16 +78,16 @@ th, td {
 
 .table-zebra {
     tr:nth-child(even) {
-        background-color: $mono-lightest;
+        background-color: $gray-lightest;
     }
 }
 
 .table-zebra-cols {
     th:nth-child(odd) {
-        background-color: $mono-middle;
+        background-color: $gray;
     }
     td:nth-child(odd) {
-        background-color: $mono-lightest;
+        background-color: $gray-lightest;
     }
 }
 
