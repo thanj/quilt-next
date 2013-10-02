@@ -37,6 +37,10 @@ $success:             $green;  // Submit button elements, success messages, icon
 $alert:               #F57003; // "Warning" alert messages, icon-orange icons,
 $warning:             #CC3300; // "Error" alert messages, icon-red icon
 
+$iconStandardSizes: 16 24 32 48 64;
+$iconStandardColors: (green, $success), (blue, $action), 
+    (white, $white), (orange, $alert), (red, $warning);
+
 
 // Global values
 // --------------------------------------------------
