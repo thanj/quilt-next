@@ -37,16 +37,12 @@ $success:             $green;  // Submit button elements, success messages, icon
 $alert:               #F57003; // "Warning" alert messages, icon-orange icons,
 $warning:             #CC3300; // "Error" alert messages, icon-red icon
 
+
+
+$providerIconSizes: 16 24 32 48;
+
 $iconStandardSizes: 16 24 32 48 64;
-$iconStandardColors: (green, $success), (blue, $action), 
-    (white, $white), (orange, $alert), (red, $warning);
-
-
-// Global values
-// --------------------------------------------------
-
-// Grays
-// -------------------------
+$iconStandardColors: (green, $success), (blue, $action), (white, $white), (orange, $alert), (red, $warning);
 
 $gray-darker:            lighten(#000, 13.5%) !default; // #222
 $gray-dark:              lighten(#000, 20%) !default;   // #333
@@ -79,8 +75,8 @@ $link-hover-color:      darken($link-color, 15%) !default;
 // Typography
 // -------------------------
 
-$font-family-sans-serif:  "Helvetica Neue", Helvetica, Arial, sans-serif !default;
-$font-family-serif:       Georgia, "Times New Roman", Times, serif !default;
+$font-family-sans-serif:  "proxima-nova", Helvetica, Arial, sans-serif !default;
+$font-family-serif:       $font-family-sans-serif;
 $font-family-monospace:   Monaco, Menlo, Consolas, "Courier New", monospace !default;
 $font-family-base:        $font-family-sans-serif !default;
 
@@ -93,7 +89,7 @@ $line-height-base:        1.428571429 !default; // 20/14
 $line-height-computed:    floor($font-size-base * $line-height-base) !default; // ~20px
 
 $headings-font-family:    $font-family-base !default;
-$headings-font-weight:    500 !default;
+$headings-font-weight:    200 !default;
 $headings-line-height:    1.1 !default;
 
 // Iconography
@@ -118,12 +114,13 @@ $padding-small-horizontal:       10px !default;
 
 $line-height-large:              1.33 !default;
 $line-height-small:              1.5 !default;
+$line-height-computed:           24px !default;
 
 $border-radius-base:             4px !default;
 $border-radius-large:            6px !default;
 $border-radius-small:            3px !default;
 
-$component-active-bg:            $brand-primary !default;
+$component-active-bg:            $action !default;
 
 $caret-width-base:               4px !default;
 $caret-width-large:              5px !default;
@@ -152,26 +149,26 @@ $btn-default-bg:                 #fff !default;
 $btn-default-border:             #ccc !default;
 
 $btn-primary-color:              #fff !default;
-$btn-primary-bg:                 $brand-primary !default;
+$btn-primary-bg:                 $action !default;
 $btn-primary-border:             darken($btn-primary-bg, 5%) !default;
 
 $btn-success-color:              #fff !default;
-$btn-success-bg:                 $brand-success !default;
+$btn-success-bg:                 $success !default;
 $btn-success-border:             darken($btn-success-bg, 5%) !default;
 
 $btn-warning-color:              #fff !default;
-$btn-warning-bg:                 $brand-warning !default;
+$btn-warning-bg:                 $warning !default;
 $btn-warning-border:             darken($btn-warning-bg, 5%) !default;
 
 $btn-danger-color:               #fff !default;
-$btn-danger-bg:                  $brand-danger !default;
+$btn-danger-bg:                  $alert !default;
 $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
 $btn-info-color:                 #fff !default;
-$btn-info-bg:                    $brand-info !default;
+$btn-info-bg:                    $mono-middle !default;
 $btn-info-border:                darken($btn-info-bg, 5%) !default;
 
-$btn-link-disabled-color:        $gray-light !default;
+$btn-link-disabled-color:        $mono-light !default;
 
 
 // Forms
