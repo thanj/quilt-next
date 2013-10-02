@@ -1,0 +1,17 @@
+<%
+file_name = if @opts[:font_face_path]
+File.join @opts[:font_face_path], @data[:file_name]
+else
+@data[:file_name]
+end
+%>/* 
+ * Janrain Icon Font - IE7 comapatible
+ */
+@import "compass/css3/";
+@import "compass/css3/font-face";
+@import "_variables";
+
+<% @data[:glyphs].each_with_index do |name, index| %>
+.<%= @opts[:css_prefix] + name %> { 
+	*zoom:expression( this.runtimeStyle['zoom'] = "1", this.innerHTML = '&#xe<%= (61696+index).to_s(16) %>;'); font-family: 'janrain-icons';
+}<% end %>
