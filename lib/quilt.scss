@@ -20,7 +20,7 @@
 
 // Core CSS
 @import "scaffolding";
-@import "type";
+//@import "type";
 @import "code";
 @import "grid";
 @import "tables";
@@ -62,3 +62,4 @@
 
 // Custom add-ons
 @import "tables-custom";
+@import "type-custom";

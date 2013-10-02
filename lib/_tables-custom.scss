@@ -2,6 +2,14 @@
 // Add any style overrides here to avoid merge conflicts on rebasing.
 // --------------------------------------------------------------------
 
+table {
+	margin: 15px 0;
+}
+
+th, td { 
+    padding: 10px;
+}
+
 .table-reference {
     table-layout: fixed;
     border-spacing: 0;

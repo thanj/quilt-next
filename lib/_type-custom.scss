@@ -1,0 +1,246 @@
+@import "_variables";
+@import "_mixins";
+
+.janrain-font {
+  font-family: "proxima-nova", helvetica;
+}
+
+// Clearfix for clearing floats like a boss h5bp.com/q
+.clearfix {
+	zoom: 1;
+	&:before, &:after {
+    display: table;
+    content: "";
+	    zoom: 1;
+    	*display: inline;
+	}
+	&:after {
+	clear: both;
+	}
+}
+.inline {
+    @include inline-block;
+    vertical-align: middle;
+}
+.right {float: right;}
+.left {float: left;}
+.vertTop {vertical-align: top;}
+.vertMiddle {vertical-align: middle;}
+
+pre {
+	white-space: pre-wrap;       /* css-3 */
+	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+	white-space: -pre-wrap;      /* Opera 4-6 */
+	white-space: -o-pre-wrap;    /* Opera 7 */
+	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+}
+
+* {
+	word-wrap: break-word;
+}
+
+strong {
+	color: #555;
+	font-weight: bold;
+}
+
+br {
+	clear: both;
+}
+
+/*
+ * HEADERS:
+ *
+ * All headers should be defined in relation to the base-font size for their containing element
+ */
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+	color: $slate-alt;
+	line-height: 1;
+	margin: 24px 0 12px 0;
+	&:first-child { margin-top: 0; }
+}
+h1 {
+	font-size: 2em;
+	color: $slate;
+	font-weight: 100;
+    border-bottom: 1px solid $gray-lighter;
+    padding-bottom: 8px;
+	margin-bottom: 24px;
+}
+h2 {
+	font-size: 1.625em;
+	color: desaturate( lighten( $slate-alt, 35 ), 15 ); 
+	font-weight: 500;
+}
+h3 {
+	font-size: 1.5em;
+	font-weight: 100;
+}
+h4 {
+	font-size: 1.25em;
+    color: desaturate( lighten( $slate-alt, 35 ), 15 );
+	font-weight: 700;
+}
+h5 {
+	font-size: 1em;
+	font-weight: 700;
+	text-transform: uppercase;
+	color: desaturate( lighten( $slate, 35 ), 15 );
+}
+
+p {
+	margin: 0 0 12px 0;
+}
+
+/*
+ * Font-size modifiers can be applied to text elements themselves or containing elements;
+ * the effect should be the same either way.
+ */
+.small-text {
+	font-size: 14px;
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.142857;
+	}
+}
+
+.x-small-text {
+	font-size: 13px; 
+	line-height: 18px;
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.230769;
+	}
+}
+
+.dense-text {
+    line-height: 18px;
+}
+
+a:link {
+	color: $action;
+	text-decoration: none;
+}
+a:visited {
+	color: $link-visited;
+}
+a:hover {
+	color: $link-hover;
+}
+
+hr {
+	@include hr;
+}
+
+hr.blur {
+ 	border: 0;
+  height: 3px;
+ 	@include box-shadow (none);
+  @include background (linear-gradient(left, transparent, rgba(0,0,0,0.1), transparent));
+}
+input, select, textarea, button {
+	@include janrain-font;
+	border: 0;
+}
+
+input::-moz-focus-inner,
+button::-moz-focus-inner /*Remove button padding in FF*/
+{
+    border: 0;
+    padding: 0;
+}
+
+select.styled {
+	-webkit-appearance: none;
+	background: $white image-url('select_arrow.png') no-repeat right center;
+	width: 150px;
+}
+
+.rightText {
+  text-align: right;
+}
+.centerText {
+  text-align: center;
+}
+
+// Lists
+// Unordered and Ordered lists
+ul, ol {
+  @include ul(disc, 0, 0 0 $baseline 25px);
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+li {
+  line-height: $baseline;
+  list-style: inherit;
+}
+ul.unstyled {
+  @include ul(none, 0, 0);
+}
+
+ul.inline-list {
+  @include ul(disc, 0, 0 0 $baseline 25px);
+  li {
+    float: left;
+    width: 150px;
+    display: list-item;
+  }
+}
+
+// Description Lists
+dl {
+  margin-bottom: $baseline;
+  dt, dd {
+    line-height: $baseline;
+  }
+  dt {
+    font-weight: bold;
+  }
+  dd {
+    margin-left: $baseline / 2;
+  }
+}
+
+// Lists that should be broken into columns, in browsers that support that
+.columns-list {
+    @include column-width( 20em );
+    @include column-gap( 1em );
+}
+
+.columns-4 { @include column-count( 4 ); }
+.columns-3 { @include column-count( 3 ); }
+.columns-2 { @include column-count( 2 ); }
+
+pre, code, tt {
+	font-family: "Ubuntu Mono", monospace;
+    font-weight: 700;
+    color: lighten( $slate, 4 );
+}
+
+.code-callout {
+	color: #CB4B16;
+	font-size: 13px;
+	background: #fbfbfb;
+	border: 1px solid rgba(0,0,0,0.1);
+	@include border-radius(3px);
+	padding: 2px 4px;
+}
+
+.secondary {
+    font-size: 90%;
+    color: $gray;
+}
+
+.truncate-text {
+    white-space: nowrap;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+}
