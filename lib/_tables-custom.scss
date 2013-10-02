@@ -1,0 +1,85 @@
+// Custom tables for Quilt projects that are not included in Bootstrap.
+// Add any style overrides here to avoid merge conflicts on rebasing.
+// --------------------------------------------------------------------
+
+.table-reference {
+    table-layout: fixed;
+    border-spacing: 0;
+	width: 100%;
+    border: 1px solid $mono-lighter;
+	thead {
+		border-bottom: 1px solid $mono-light;
+		th,td {
+			font-size: 1em;
+			font-weight: 700;
+			color: #333;
+            background-color: $mono-light;
+            border-color: $mono-middle;
+		}
+	}
+	tbody {
+		tr {
+            th {
+                font-weight: 700;
+            }
+			td {
+				border-bottom: 1px solid $mono-lighter;
+				color: #666;
+				font-weight: normal;
+				font-size: 1em;
+			}
+			&:last-child {
+				td {
+					border-bottom: none;
+				}
+			}
+		}
+	}
+    td {
+        vertical-align: top;
+    }
+}
+
+.table-rounded {
+    border-collapse: separate;
+    border-spacing: 0;
+    padding: 0;
+    border-radius: 3px;
+    thead:first-child, tbody:first-child { 
+        tr:first-child {
+            th:first-child, td:first-child {
+                border-top-left-radius: 3px;
+            }
+            th:last-child, td:last-child {
+                border-top-right-radius: 3px;
+            }
+        }
+    }
+    thead:last-child, tbody:last-child { 
+        tr:last-child {
+            -child, td:first-child {
+                border-bottom-left-radius: 3px;
+            }
+            th:last-child, td:last-child {
+                border-bottom-right-radius: 3px;
+            }
+        }
+    }
+
+}
+
+.table-zebra {
+    tr:nth-child(even) {
+        background-color: $mono-lightest;
+    }
+}
+
+.table-zebra-cols {
+    th:nth-child(odd) {
+        background-color: $mono-middle;
+    }
+    td:nth-child(odd) {
+        background-color: $mono-lightest;
+    }
+}
+

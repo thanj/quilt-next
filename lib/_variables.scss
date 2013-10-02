@@ -165,10 +165,10 @@ $btn-danger-bg:                  $alert !default;
 $btn-danger-border:              darken($btn-danger-bg, 5%) !default;
 
 $btn-info-color:                 #fff !default;
-$btn-info-bg:                    $mono-middle !default;
+$btn-info-bg:                    $gray !default;
 $btn-info-border:                darken($btn-info-bg, 5%) !default;
 
-$btn-link-disabled-color:        $mono-light !default;
+$btn-link-disabled-color:        $gray-light !default;
 
 
 // Forms

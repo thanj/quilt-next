@@ -1,5 +1,7 @@
 /*!
- * Bootstrap v3.0.0
+ * Quilt v3.0.7
+ *
+ * a fork of Bootstrap v3.0.0
  *
  * Copyright 2013 Twitter, Inc
  * Licensed under the Apache License v2.0
@@ -27,7 +29,7 @@
 
 // Components
 @import "component-animations";
-@import "glyphicons";
+//@import "glyphicons";
 @import "dropdowns";
 @import "button-groups";
 @import "input-groups";
@@ -49,11 +51,14 @@
 @import "close";
 
 // Components w/ JavaScript
-@import "modals";
-@import "tooltip";
-@import "popovers";
-@import "carousel";
+//@import "modals";
+//@import "tooltip";
+//@import "popovers";
+//@import "carousel";
 
 // Utility classes
 @import "utilities";
 @import "responsive-utilities";
+
+// Custom add-ons
+@import "tables-custom";
