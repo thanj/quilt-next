@@ -3,6 +3,16 @@
 @import "_janrain-mixins";
 @import "_janrain-font";
 
+html, body {
+	font-family: Helvetica, Arial, sans-serif;
+	text-align: left;
+	font-weight: normal;
+	color: $slate;
+	height: 100%;
+	min-height: 100%;
+	margin: 0;
+}
+
 // Global Navigation - used across all Janrain sites
 .global_nav {
 	width: 100%;
