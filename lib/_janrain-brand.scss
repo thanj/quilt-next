@@ -123,7 +123,7 @@ html, body {
 	}
 }
 
-.mobile_nav { @extend .visible-xs; }
+.mobile_nav { @extend .show-for-small; }
 
 /*
  * A sidebar navigation column, where it is appropriate
@@ -394,6 +394,7 @@ html, body {
 	min-height: calc(100% - 90px);
 	margin-left: 300px;
     border-left: 1px solid $gray-lighter;
+    background: #fff;
 }
 
 .selected .subnav {
@@ -402,43 +403,43 @@ html, body {
 }
 
 .subnav {
-  display: none;
-  @include ul (none, 7px 0, 0);
-  background: $river-blue none;
-  border-radius: 5px;
-  position: absolute;
-  top: 100%;
-  right: 0;
-  z-index: 9999999;
-  width: 175px;
-  text-align: left;
-  > li > a {
-    color: $sky-alt;
-    display: block;
-    padding: 5px 10px;
-    text-transform: capitalize;
-    &:hover {
-      @include hover-transition;
-      color: $white;
-      background: $river-blue;
+    display: none;
+    @include ul (none, 7px 0, 0);
+    background: $river-blue none;
+    border-radius: 5px;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    z-index: 9999999;
+    width: 175px;
+    text-align: left;
+    > li > a {
+        color: $sky-alt;
+        display: block;
+        padding: 5px 10px;
+        text-transform: capitalize;
+        &:hover {
+            @include hover-transition;
+            color: $white;
+            background: $river-blue;
+        }
     }
-  }
-  .selected a {
-    background: $river-blue;
-  }
-  .selected a:before {
-    content: '\2192\00a0';
-  }
-  &:before {
-      font-size: 24px;
-      position: absolute;
-      right: 11px;
-      width: 24px;
-      height: 24px;
-      color: $river-blue;
-      z-index: 1;
-      top: -8px;
-  }
+    .selected a {
+        background: $river-blue;
+    }
+    .selected a:before {
+        content: '\2192\00a0';
+    }
+    &:before {
+        font-size: 24px;
+        position: absolute;
+        right: 11px;
+        width: 24px;
+        height: 24px;
+        color: $river-blue;
+        z-index: 1;
+        top: -8px;
+    }
 }
 
 /* Main navigation add-on for inside a .nav_bar div */
