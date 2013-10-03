@@ -166,7 +166,7 @@ select.styled {
 // Lists
 // Unordered and Ordered lists
 ul, ol {
-  @include ul(disc, 0, 0 0 $baseline 25px);
+  @include ul(disc, 0, 0 0 $line-height-computed 25px);
 }
 
 ol {
@@ -180,7 +180,7 @@ ol ul {
   margin-bottom: 0;
 }
 li {
-  line-height: $baseline;
+  line-height: $line-height-computed;
   list-style: inherit;
 }
 ul.unstyled {
@@ -188,7 +188,7 @@ ul.unstyled {
 }
 
 ul.inline-list {
-  @include ul(disc, 0, 0 0 $baseline 25px);
+  @include ul(disc, 0, 0 0 $line-height-computed 25px);
   li {
     float: left;
     width: 150px;
@@ -198,15 +198,15 @@ ul.inline-list {
 
 // Description Lists
 dl {
-  margin-bottom: $baseline;
+  margin-bottom: $line-height-computed;
   dt, dd {
-    line-height: $baseline;
+    line-height: $line-height-computed;
   }
   dt {
     font-weight: bold;
   }
   dd {
-    margin-left: $baseline / 2;
+    margin-left: $line-height-computed / 2;
   }
 }
 
