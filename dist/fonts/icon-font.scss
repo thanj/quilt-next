@@ -1,0 +1,365 @@
+/* 
+ * Janrain Icon Font
+ */
+@import "compass/css3/";
+@import "_mixins";
+@import "_variables";
+
+@font-face {
+	font-family: 'janrain-icons';
+	src: asset-url('janrain-icons_d310f473785f066e85aa06177cf5850d.eot?#iefix', font) format('embedded-opentype');
+	src: asset-url('janrain-icons_d310f473785f066e85aa06177cf5850d.svg#janrain-icons', font) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: 'janrain-icons';
+	src: inline-font-files('janrain-icons_d310f473785f066e85aa06177cf5850d.woff',woff,'janrain-icons_d310f473785f066e85aa06177cf5850d.ttf',truetype); 
+	font-weight: normal;
+	font-style: normal;
+}
+
+@mixin janrain-icon-size ($size, $lineHeight, $widthHeight, $radius, $padding) {
+	font-size: 0px + $size;
+	line-height: $lineHeight / $size;
+	@if $widthHeight {
+		width: $widthHeight;
+		height: $widthHeight;
+	}
+	@if $padding {
+		padding: $padding;
+	}
+	@if $radius {
+		@include border-radius ($radius);
+	}
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+[class*="janrain-icon-"] {
+	font-family: "janrain-icons";
+	font-style: normal;
+	font-weight: normal;
+	speak: none;
+	display: inline-block;
+	vertical-align: middle;
+}
+.janrain-no-text-effect:link,
+.janrain-no-text-effect:visited,
+.janrain-no-text-effect {
+	text-decoration: none;
+	@include text-shadow (none);
+}
+
+@each $iconSize in $iconStandardSizes {
+	.janrain-icon-#{$iconSize} {
+		@include janrain-icon-size( $iconSize, $iconSize, false, false, false );
+	}
+}
+
+@each $iconColor in $iconStandardColors {
+	$name: nth($iconColor, 1);
+	$value: nth($iconColor, 2);
+
+	.janrain-icon-#{$name} {
+		color: $value;
+	}
+	.janrain-icon-#{$name}-bg {
+		background-color: $value;
+	}
+}
+
+.janrain-icon-blue-bg,
+.janrain-icon-green-bg,
+.janrain-icon-orange-bg,
+.janrain-icon-red-bg {
+	color: white;
+	text-align: center;
+	&.janrain-icon-24 {
+		@include janrain-icon-size (16px, 18px, 18px, 3px, 3px);
+	}
+	&.janrain-icon-32 {
+		@include janrain-icon-size (20px, 22px, 22px, 3px, 5px);
+	}
+	&.janrain-icon-48 {
+		@include janrain-icon-size (34px, 38px, 38px, 5px, 5px);
+	}
+	&.janrain-icon-64 {
+		@include janrain-icon-size (42px, 44px, 44px, 8px, 10px);
+	}
+}
+
+.janrain-icon-calendar:before,
+.janrain-icon-dropdown:before,
+.janrain-icon-network:before,
+.janrain-icon-chat:before,
+.janrain-icon-grid:before,
+.janrain-icon-check:before,
+.janrain-icon-cloud:before,
+.janrain-icon-forward:before,
+.janrain-icon-pages:before,
+.janrain-icon-ex:before,
+.janrain-icon-page:before,
+.janrain-icon-text:before,
+.janrain-icon-gear:before,
+.janrain-icon-fill:before,
+.janrain-icon-book:before,
+.janrain-icon-input:before,
+.janrain-icon-dashboard:before,
+.janrain-icon-webinar:before,
+.janrain-icon-analytics:before,
+.janrain-icon-collapsed:before,
+.janrain-icon-battery:before,
+.janrain-icon-error:before,
+.janrain-icon-folder:before,
+.janrain-icon-android:before,
+.janrain-icon-code:before,
+.janrain-icon-unlocked:before,
+.janrain-icon-frame:before,
+.janrain-icon-plus:before,
+.janrain-icon-leftalign:before,
+.janrain-icon-id:before,
+.janrain-icon-question:before,
+.janrain-icon-locked:before,
+.janrain-icon-database:before,
+.janrain-icon-alert:before,
+.janrain-icon-brush:before,
+.janrain-icon-pencil:before,
+.janrain-icon-power:before,
+.janrain-icon-delete:before,
+.janrain-icon-up:before,
+.janrain-icon-person:before,
+.janrain-icon-list:before,
+.janrain-icon-camera:before,
+.janrain-icon-barchart:before,
+.janrain-icon-link:before,
+.janrain-icon-help:before,
+.janrain-icon-fire:before,
+.janrain-icon-bigger:before,
+.janrain-icon-check2:before,
+.janrain-icon-linegraph:before,
+.janrain-icon-down:before,
+.janrain-icon-compass:before,
+.janrain-icon-partnership:before,
+.janrain-icon-dropdown-collapsed:before,
+.janrain-icon-wand:before,
+.janrain-icon-back:before,
+.janrain-icon-addressbook:before,
+.janrain-icon-clock:before,
+.janrain-icon-tablet:before,
+.janrain-icon-smaller:before,
+.janrain-icon-search:before,
+.janrain-icon-target:before,
+.janrain-icon-adjustment:before,
+.janrain-icon-rss:before,
+.janrain-icon-desktop:before,
+.janrain-icon-expanded:before,
+.janrain-icon-trash:before,
+.janrain-icon-gauge:before,
+.janrain-icon-people:before,
+.janrain-icon-email:before,
+.janrain-icon-refresh:before,
+.janrain-icon-gears:before,
+.janrain-icon-home:before,
+.janrain-icon-apple:before,
+.janrain-icon-info:before,
+.janrain-icon-janrain:before,
+.janrain-icon-createuser:before,
+.janrain-icon-bullhorn:before,
+.janrain-icon-phone:before,
+.janrain-icon-video:before,
+.janrain-icon-key:before,
+.janrain-icon-document:before,
+.janrain-icon-ticket:before,
+.janrain-icon-ex2:before,
+.janrain-icon-tag:before,
+.janrain-icon-mail:before,
+.janrain-icon-wrench:before,
+.janrain-icon-globe:before,
+.janrain-icon-conversation:before {
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	display: inline-block;
+	text-decoration: inherit;
+}
+
+.janrain-icon-calendar:before { content: "\f100"; }
+.janrain-icon-dropdown:before { content: "\f101"; }
+.janrain-icon-network:before { content: "\f102"; }
+.janrain-icon-chat:before { content: "\f103"; }
+.janrain-icon-grid:before { content: "\f104"; }
+.janrain-icon-check:before { content: "\f105"; }
+.janrain-icon-cloud:before { content: "\f106"; }
+.janrain-icon-forward:before { content: "\f107"; }
+.janrain-icon-pages:before { content: "\f108"; }
+.janrain-icon-ex:before { content: "\f109"; }
+.janrain-icon-page:before { content: "\f10a"; }
+.janrain-icon-text:before { content: "\f10b"; }
+.janrain-icon-gear:before { content: "\f10c"; }
+.janrain-icon-fill:before { content: "\f10d"; }
+.janrain-icon-book:before { content: "\f10e"; }
+.janrain-icon-input:before { content: "\f10f"; }
+.janrain-icon-dashboard:before { content: "\f110"; }
+.janrain-icon-webinar:before { content: "\f111"; }
+.janrain-icon-analytics:before { content: "\f112"; }
+.janrain-icon-collapsed:before { content: "\f113"; }
+.janrain-icon-battery:before { content: "\f114"; }
+.janrain-icon-error:before { content: "\f115"; }
+.janrain-icon-folder:before { content: "\f116"; }
+.janrain-icon-android:before { content: "\f117"; }
+.janrain-icon-code:before { content: "\f118"; }
+.janrain-icon-unlocked:before { content: "\f119"; }
+.janrain-icon-frame:before { content: "\f11a"; }
+.janrain-icon-plus:before { content: "\f11b"; }
+.janrain-icon-leftalign:before { content: "\f11c"; }
+.janrain-icon-id:before { content: "\f11d"; }
+.janrain-icon-question:before { content: "\f11e"; }
+.janrain-icon-locked:before { content: "\f11f"; }
+.janrain-icon-database:before { content: "\f120"; }
+.janrain-icon-alert:before { content: "\f121"; }
+.janrain-icon-brush:before { content: "\f122"; }
+.janrain-icon-pencil:before { content: "\f123"; }
+.janrain-icon-power:before { content: "\f124"; }
+.janrain-icon-delete:before { content: "\f125"; }
+.janrain-icon-up:before { content: "\f126"; }
+.janrain-icon-person:before { content: "\f127"; }
+.janrain-icon-list:before { content: "\f128"; }
+.janrain-icon-camera:before { content: "\f129"; }
+.janrain-icon-barchart:before { content: "\f12a"; }
+.janrain-icon-link:before { content: "\f12b"; }
+.janrain-icon-help:before { content: "\f12c"; }
+.janrain-icon-fire:before { content: "\f12d"; }
+.janrain-icon-bigger:before { content: "\f12e"; }
+.janrain-icon-check2:before { content: "\f12f"; }
+.janrain-icon-linegraph:before { content: "\f130"; }
+.janrain-icon-down:before { content: "\f131"; }
+.janrain-icon-compass:before { content: "\f132"; }
+.janrain-icon-partnership:before { content: "\f133"; }
+.janrain-icon-dropdown-collapsed:before { content: "\f134"; }
+.janrain-icon-wand:before { content: "\f135"; }
+.janrain-icon-back:before { content: "\f136"; }
+.janrain-icon-addressbook:before { content: "\f137"; }
+.janrain-icon-clock:before { content: "\f138"; }
+.janrain-icon-tablet:before { content: "\f139"; }
+.janrain-icon-smaller:before { content: "\f13a"; }
+.janrain-icon-search:before { content: "\f13b"; }
+.janrain-icon-target:before { content: "\f13c"; }
+.janrain-icon-adjustment:before { content: "\f13d"; }
+.janrain-icon-rss:before { content: "\f13e"; }
+.janrain-icon-desktop:before { content: "\f13f"; }
+.janrain-icon-expanded:before { content: "\f140"; }
+.janrain-icon-trash:before { content: "\f141"; }
+.janrain-icon-gauge:before { content: "\f142"; }
+.janrain-icon-people:before { content: "\f143"; }
+.janrain-icon-email:before { content: "\f144"; }
+.janrain-icon-refresh:before { content: "\f145"; }
+.janrain-icon-gears:before { content: "\f146"; }
+.janrain-icon-home:before { content: "\f147"; }
+.janrain-icon-apple:before { content: "\f148"; }
+.janrain-icon-info:before { content: "\f149"; }
+.janrain-icon-janrain:before { content: "\f14a"; }
+.janrain-icon-createuser:before { content: "\f14b"; }
+.janrain-icon-bullhorn:before { content: "\f14c"; }
+.janrain-icon-phone:before { content: "\f14d"; }
+.janrain-icon-video:before { content: "\f14e"; }
+.janrain-icon-key:before { content: "\f14f"; }
+.janrain-icon-document:before { content: "\f150"; }
+.janrain-icon-ticket:before { content: "\f151"; }
+.janrain-icon-ex2:before { content: "\f152"; }
+.janrain-icon-tag:before { content: "\f153"; }
+.janrain-icon-mail:before { content: "\f154"; }
+.janrain-icon-wrench:before { content: "\f155"; }
+.janrain-icon-globe:before { content: "\f156"; }
+.janrain-icon-conversation:before { content: "\f157"; }
+
+$icons: 
+(calendar,\f100),
+(dropdown,\f101),
+(network,\f102),
+(chat,\f103),
+(grid,\f104),
+(check,\f105),
+(cloud,\f106),
+(forward,\f107),
+(pages,\f108),
+(ex,\f109),
+(page,\f10a),
+(text,\f10b),
+(gear,\f10c),
+(fill,\f10d),
+(book,\f10e),
+(input,\f10f),
+(dashboard,\f110),
+(webinar,\f111),
+(analytics,\f112),
+(collapsed,\f113),
+(battery,\f114),
+(error,\f115),
+(folder,\f116),
+(android,\f117),
+(code,\f118),
+(unlocked,\f119),
+(frame,\f11a),
+(plus,\f11b),
+(leftalign,\f11c),
+(id,\f11d),
+(question,\f11e),
+(locked,\f11f),
+(database,\f120),
+(alert,\f121),
+(brush,\f122),
+(pencil,\f123),
+(power,\f124),
+(delete,\f125),
+(up,\f126),
+(person,\f127),
+(list,\f128),
+(camera,\f129),
+(barchart,\f12a),
+(link,\f12b),
+(help,\f12c),
+(fire,\f12d),
+(bigger,\f12e),
+(check2,\f12f),
+(linegraph,\f130),
+(down,\f131),
+(compass,\f132),
+(partnership,\f133),
+(dropdown-collapsed,\f134),
+(wand,\f135),
+(back,\f136),
+(addressbook,\f137),
+(clock,\f138),
+(tablet,\f139),
+(smaller,\f13a),
+(search,\f13b),
+(target,\f13c),
+(adjustment,\f13d),
+(rss,\f13e),
+(desktop,\f13f),
+(expanded,\f140),
+(trash,\f141),
+(gauge,\f142),
+(people,\f143),
+(email,\f144),
+(refresh,\f145),
+(gears,\f146),
+(home,\f147),
+(apple,\f148),
+(info,\f149),
+(janrain,\f14a),
+(createuser,\f14b),
+(bullhorn,\f14c),
+(phone,\f14d),
+(video,\f14e),
+(key,\f14f),
+(document,\f150),
+(ticket,\f151),
+(ex2,\f152),
+(tag,\f153),
+(mail,\f154),
+(wrench,\f155),
+(globe,\f156),
+(conversation,\f157),(null,\0000);
+

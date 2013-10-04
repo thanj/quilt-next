@@ -69,14 +69,14 @@ module.exports = function(grunt) {
       }
     },
 
-    sass: {
+    compass: {
       bootstrap: {
         src: ['lib/quilt.scss'],
         dest: 'dist/css/<%= pkg.name %>.css'
       },
       min: {
         options: {
-          style: 'compressed'
+          outputStyle: 'compressed'
         },
         src: ['lib/quilt.scss'],
         dest: 'dist/css/<%= pkg.name %>.min.css'
@@ -129,9 +129,9 @@ module.exports = function(grunt) {
         files: '<%= jshint.test.src %>',
         tasks: ['jshint:test', 'qunit']
       },
-      sass: {
+      compass: {
         files: 'lib/*.scss',
-        tasks: ['sass']
+        tasks: ['compass']
       }
     }
   });
@@ -148,7 +148,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-html-validation');
   grunt.loadNpmTasks('grunt-jekyll');
-  grunt.loadNpmTasks('grunt-contrib-sass');
+  grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('browserstack-runner');
 
   // Docs HTML validation task
@@ -156,20 +156,12 @@ module.exports = function(grunt) {
 
   // Test task.
   var testSubtasks = ['dist-css', 'jshint', 'qunit', 'validate-html'];
-  // Only run BrowserStack tests under Travis
-  if (process.env.TRAVIS) {
-    // Only run BrowserStack tests if this is a mainline commit in twbs/bootstrap, or you have your own BrowserStack key
-    if ((process.env.TRAVIS_REPO_SLUG === 'twbs/bootstrap' && process.env.TRAVIS_PULL_REQUEST === 'false') || process.env.TWBS_HAVE_OWN_BROWSERSTACK_KEY) {
-      testSubtasks.push('browserstack_runner');
-    }
-  }
-  grunt.registerTask('test', testSubtasks);
 
   // JS distribution task.
   grunt.registerTask('dist-js', ['concat', 'uglify']);
 
   // CSS distribution task.
-  grunt.registerTask('dist-css', ['sass']);
+  grunt.registerTask('dist-css', ['compass']);
 
   // Fonts distribution task.
   grunt.registerTask('dist-fonts', ['copy']);
@@ -178,7 +170,7 @@ module.exports = function(grunt) {
   grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js']);
 
   // Default task.
-  grunt.registerTask('default', ['test', 'dist', 'build-customizer']);
+  grunt.registerTask('default', ['dist', 'build-customizer']);
 
   // task for building customizer
   grunt.registerTask('build-customizer', 'Add scripts/less files to customizer.', function () {
@@ -197,7 +189,7 @@ module.exports = function(grunt) {
     }
 
     var customize = fs.readFileSync('customize.html', 'utf-8')
-    var files = getFiles('js') + getFiles('less') + getFiles('fonts')
+    var files = getFiles('js') + getFiles('fonts')
     fs.writeFileSync('assets/js/raw-files.js', files)
   });
 };

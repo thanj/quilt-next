@@ -1,7 +1,7 @@
 /**
 * quilt-next.js v3.0.7 by @fat and @mdo
 * Copyright 2013 Janrain UX Team
-* http://www.apache.org/licenses/LICENSE-2.0
+* http://www.wtfpl.net/about/
 */
 if (!jQuery) { throw new Error("Bootstrap requires jQuery") }
 
