@@ -13,6 +13,8 @@ html, body {
 	margin: 0;
 }
 
+.wrapper { position: relative; }
+
 // Global Navigation - used across all Janrain sites
 .global_nav {
 	width: 100%;
@@ -51,7 +53,7 @@ html, body {
             &.profile {
                 background: $slate-alt;
                 text-transform: none;
-                > a { 
+                > a {
 					font-size: 15px;
                     padding: 0 .5em;
                 }
@@ -92,7 +94,7 @@ html, body {
     }
 }
 
-/* 
+/*
  * The default and admin navigation bar that goes under the global nav
  *
  * Each site should have a main_nav element for orienting and wayfinding.
@@ -112,9 +114,9 @@ html, body {
 
 	// Color overrides for elements which can appear elsewhere with different color backgrounds
 	.breadcrumbs li {
-        color: $sky-alt; 
-		a, a:link, a:hover { 
-			color: $white; 
+        color: $sky-alt;
+		a, a:link, a:hover {
+			color: $white;
 			&:after {
 				border-color: $sky;
 			}
@@ -180,7 +182,7 @@ html, body {
                     background: darken( $sky, 3 );
                 }
             }
-            
+
             &.selected {
                 background: darken( $sky, 6 );
                 box-shadow: inset -1px -1px 1px darken( $sky, 9 );
@@ -220,7 +222,7 @@ html, body {
         list-style: none;
         margin: 0;
         padding: 0;
-        @include box-sizing(border-box); 
+        @include box-sizing(border-box);
     }
 
     li {
@@ -263,8 +265,8 @@ html, body {
 
     .dropdown {
         position: relative;
-        > a { 
-            cursor: pointer; 
+        > a {
+            cursor: pointer;
             &:after {
                 padding: .5em 1em;
                 float: right;
@@ -309,7 +311,7 @@ html, body {
                 &.selected, &.current_page_item {
 
                     a {
-                        color: $slate; 
+                        color: $slate;
                         font-weight: 700;
                         padding: none;
                     }
@@ -362,7 +364,7 @@ html, body {
     padding: 0;
     vertical-align: middle;
     border-bottom: 1px solid $gray-lighter;
-    
+
     button {
         display: inline-block;
         vertical-align: middle;
@@ -610,7 +612,7 @@ html, body {
         margin: 0 0 0 -36px;
         padding: 0;
         background: transparent;
-        border: none; 
+        border: none;
         @include font-size(16px);
         color: $sky-alt;
         &:hover, &:active {
