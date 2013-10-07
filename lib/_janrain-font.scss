@@ -23,400 +23,420 @@
 
 @font-face {
     font-family: 'proxima-nova';
-    font-weight: 100;
     src: font-url('26D3F9_E_0.eot');
     src: font-url('26D3F9_E_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_E_0.woff') format('woff'),
         font-url('26D3F9_E_0.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova';
-    font-weight: 200;
     src: font-url('26D3F9_11_0.eot');
     src: font-url('26D3F9_11_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_11_0.woff') format('woff'),
         font-url('26D3F9_11_0.ttf') format('truetype');
+    font-weight: 200;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova';
-    font-weight: 400;
     src: font-url('26D3F9_13_0.eot');
     src: font-url('26D3F9_13_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_13_0.woff') format('woff'),
         font-url('26D3F9_13_0.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova';
-    font-weight: 600;
     src: font-url('26D3F9_12_0.eot');
     src: font-url('26D3F9_12_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_12_0.woff') format('woff'),
         font-url('26D3F9_12_0.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova';
-    font-weight: 700;
     src: font-url('26D3F9_14_0.eot');
     src: font-url('26D3F9_14_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_14_0.woff') format('woff'),
         font-url('26D3F9_14_0.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova';
-    font-weight: 800;
     src: font-url('26D3F9_F_0.eot');
     src: font-url('26D3F9_F_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_F_0.woff') format('woff'),
         font-url('26D3F9_F_0.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova';
-    font-weight: 900;
     src: font-url('26D3F9_10_0.eot');
     src: font-url('26D3F9_10_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_10_0.woff') format('woff'),
         font-url('26D3F9_10_0.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
 }
 
 @font-face{
    font-family: 'proxima-nova';
-   font-weight: 100;
-   font-style: 'italic';
    src: font-url('28958E_12_0.eot');
    src: font-url('28958E_12_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_12_0.woff') format('woff'),
         font-url('28958E_12_0.ttf') format('truetype');
+   font-weight: 100;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova';
-   font-weight: 200;
-   font-style: 'italic';
    src: font-url('28958E_F_0.eot');
    src: font-url('28958E_F_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_F_0.woff') format('woff'),
         font-url('28958E_F_0.ttf') format('truetype');
+   font-weight: 200;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova';
-   font-weight: 400;
-   font-style: 'italic';
    src: font-url('28958E_10_0.eot');
    src: font-url('28958E_10_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_10_0.woff') format('woff'),
         font-url('28958E_10_0.ttf') format('truetype');
+   font-weight: 400;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova';
-   font-weight: 600;
-   font-style: 'italic';
    src: font-url('28958E_11_0.eot');
    src: font-url('28958E_11_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_11_0.woff') format('woff'),
         font-url('28958E_11_0.ttf') format('truetype');
+   font-weight: 600;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova';
-   font-weight: 700;
-   font-style: 'italic';
    src: font-url('28958E_14_0.eot');
    src: font-url('28958E_14_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_14_0.woff') format('woff'),
         font-url('28958E_14_0.ttf') format('truetype');
+   font-weight: 700;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova';
-   font-weight: 800;
-   font-style: 'italic';
    src: font-url('28958E_E_0.eot');
    src: font-url('28958E_E_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_E_0.woff') format('woff'),
         font-url('28958E_E_0.ttf') format('truetype');
+   font-weight: 800;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova';
-   font-weight: 900;
-   font-style: 'italic';
    src: font-url('28958E_13_0.eot');
    src: font-url('28958E_13_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_13_0.woff') format('woff'),
         font-url('28958E_13_0.ttf') format('truetype');
+   font-weight: 900;
+   font-style: italic;
 }
 
 @font-face {
     font-family: 'proxima-nova-scosf';
-	font-weight: 100;
     src: font-url('26D3F9_1_0.eot');
     src: font-url('26D3F9_1_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_1_0.woff') format('woff'),
         font-url('26D3F9_1_0.ttf') format('truetype');
+	font-weight: 100;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova-scosf';
-	font-weight: 200;
     src: font-url('26D3F9_D_0.eot');
     src: font-url('26D3F9_D_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_D_0.woff') format('woff'),
         font-url('26D3F9_D_0.ttf') format('truetype');
+	font-weight: 200;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova-scosf';
-	font-weight: 400;
     src: font-url('26D3F9_5_0.eot');
     src: font-url('26D3F9_5_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_5_0.woff') format('woff'),
         font-url('26D3F9_5_0.ttf') format('truetype');
+	font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova-scosf';
-	font-weight: 600;
     src: font-url('26D3F9_6_0.eot');
     src: font-url('26D3F9_6_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_6_0.woff') format('woff'),
         font-url('26D3F9_6_0.ttf') format('truetype');
+	font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova-scosf';
-	font-weight: 700;
     src: font-url('26D3F9_7_0.eot');
     src: font-url('26D3F9_7_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_7_0.woff') format('woff'),
         font-url('26D3F9_7_0.ttf') format('truetype');
+	font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova-scosf';
-	font-weight: 800;
     src: font-url('26D3F9_2_0.eot');
     src: font-url('26D3F9_2_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_2_0.woff') format('woff'),
         font-url('26D3F9_2_0.ttf') format('truetype');
+	font-weight: 800;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova-scosf';
-	font-weight: 900;
     src: font-url('26D3F9_A_0.eot');
     src: font-url('26D3F9_A_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_A_0.woff') format('woff'),
         font-url('26D3F9_A_0.ttf') format('truetype');
+	font-weight: 900;
 }
 
 @font-face{
    font-family: 'proxima-nova-scosf';
-   font-weight: 100;
-   font-style: 'italic';
    src: font-url('28958E_3_0.eot');
    src: font-url('28958E_3_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_3_0.woff') format('woff'),
         font-url('28958E_3_0.ttf') format('truetype');
+   font-weight: 100;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova-scosf';
-   font-weight: 200;
-   font-style: 'italic';
    src: font-url('28958E_B_0.eot');
    src: font-url('28958E_B_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_B_0.woff') format('woff'),
         font-url('28958E_B_0.ttf') format('truetype');
+   font-weight: 200;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova-scosf';
-   font-weight: 400;
-   font-style: 'italic';
    src: font-url('28958E_6_0.eot');
    src: font-url('28958E_6_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_6_0.woff') format('woff'),
         font-url('28958E_6_0.ttf') format('truetype');
+   font-weight: 400;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova-scosf';
-   font-weight: 600;
-   font-style: 'italic';
    src: font-url('28958E_2_0.eot');
    src: font-url('28958E_2_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_2_0.woff') format('woff'),
         font-url('28958E_2_0.ttf') format('truetype');
+   font-weight: 600;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova-scosf';
-   font-weight: 700;
-   font-style: 'italic';
    src: font-url('28958E_A_0.eot');
    src: font-url('28958E_A_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_A_0.woff') format('woff'),
         font-url('28958E_A_0.ttf') format('truetype');
+   font-weight: 700;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova-scosf';
-   font-weight: 800;
-   font-style: 'italic';
    src: font-url('28958E_1_0.eot');
    src: font-url('28958E_1_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_1_0.woff') format('woff'),
         font-url('28958E_1_0.ttf') format('truetype');
+   font-weight: 800;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova-scosf';
-   font-weight: 900;
-   font-style: 'italic';
    src: font-url('28958E_9_0.eot');
    src: font-url('28958E_9_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_9_0.woff') format('woff'),
         font-url('28958E_9_0.ttf') format('truetype');
+   font-weight: 900;
+   font-style: italic;
 }
 
 @font-face {
     font-family: 'proxima-nova-alt';
-	font-weight: 100;
     src: font-url('26D3F9_0_0.eot');
     src: font-url('26D3F9_0_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_0_0.woff') format('woff'),
         font-url('26D3F9_0_0.ttf') format('truetype');
+	font-weight: 100;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova-alt';
-	font-weight: 200;
     src: font-url('26D3F9_8_0.eot');
     src: font-url('26D3F9_8_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_8_0.woff') format('woff'),
         font-url('26D3F9_8_0.ttf') format('truetype');
+	font-weight: 200;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova-alt';
-	font-weight: 400;
     src: font-url('26D3F9_B_0.eot');
     src: font-url('26D3F9_B_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_B_0.woff') format('woff'),
         font-url('26D3F9_B_0.ttf') format('truetype');
+	font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova-alt';
-	font-weight: 600;
     src: font-url('26D3F9_9_0.eot');
     src: font-url('26D3F9_9_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_9_0.woff') format('woff'),
         font-url('26D3F9_9_0.ttf') format('truetype');
+	font-weight: 600;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova-alt';
-	font-weight: 700;
     src: font-url('26D3F9_4_0.eot');
     src: font-url('26D3F9_4_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_4_0.woff') format('woff'),
         font-url('26D3F9_4_0.ttf') format('truetype');
+	font-weight: 700;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova-alt';
-	font-weight: 800;
     src: font-url('26D3F9_3_0.eot');
     src: font-url('26D3F9_3_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_3_0.woff') format('woff'),
         font-url('26D3F9_3_0.ttf') format('truetype');
+	font-weight: 800;
+    font-style: normal;
 }
 
 @font-face {
     font-family: 'proxima-nova-alt';
-	font-weight: 900;
     src: font-url('26D3F9_C_0.eot');
     src: font-url('26D3F9_C_0.eot?#iefix') format('embedded-opentype'),
         font-url('26D3F9_C_0.woff') format('woff'),
         font-url('26D3F9_C_0.ttf') format('truetype');
+	font-weight: 900;
+    font-style: normal;
 }
 
 @font-face{
    font-family: 'proxima-nova-alt';
-   font-weight: 100;
-   font-style: 'italic';
    src: font-url('28958E_C_0.eot');
    src: font-url('28958E_C_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_C_0.woff') format('woff'),
         font-url('28958E_C_0.ttf') format('truetype');
+   font-weight: 100;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova-alt';
-   font-weight: 200;
-   font-style: 'italic';
    src: font-url('28958E_5_0.eot');
    src: font-url('28958E_5_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_5_0.woff') format('woff'),
         font-url('28958E_5_0.ttf') format('truetype');
+   font-weight: 200;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova-alt';
-   font-weight: 400;
-   font-style: 'italic';
    src: font-url('28958E_4_0.eot');
    src: font-url('28958E_4_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_4_0.woff') format('woff'),
         font-url('28958E_4_0.ttf') format('truetype');
+   font-weight: 400;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova-alt';
-   font-weight: 600;
-   font-style: 'italic';
    src: font-url('28958E_8_0.eot');
    src: font-url('28958E_8_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_8_0.woff') format('woff'),
         font-url('28958E_8_0.ttf') format('truetype');
+   font-weight: 600;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova-alt';
-   font-weight: 700;
-   font-style: 'italic';
    src: font-url('28958E_7_0.eot');
    src: font-url('28958E_7_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_7_0.woff') format('woff'),
         font-url('28958E_7_0.ttf') format('truetype');
+   font-weight: 700;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova-alt';
-   font-weight: 800;
-   font-style: 'italic';
    src: font-url('28958E_0_0.eot');
    src: font-url('28958E_0_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_0_0.woff') format('woff'),
         font-url('28958E_0_0.ttf') format('truetype');
+   font-weight: 800;
+   font-style: italic;
 }
 
 @font-face{
    font-family: 'proxima-nova-alt';
-   font-weight: 900;
-   font-style: 'italic';
    src: font-url('28958E_D_0.eot');
    src: font-url('28958E_D_0.eot?#iefix') format('embedded-opentype'),
         font-url('28958E_D_0.woff') format('woff'),
         font-url('28958E_D_0.ttf') format('truetype');
+   font-weight: 900;
+   font-style: italic;
 }
 
