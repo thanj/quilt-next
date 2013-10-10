@@ -85,6 +85,35 @@ module.exports = function(grunt) {
       }
     },
 
+    // Resize provider assets
+    "imagemagick-resize": [48,32,24,16].reduce(
+        function(subtasks, size) {
+          subtasks[size] = {
+            from: 'assets/images/providers/',
+            to: 'assets/images/providers/'+size+'/',
+            files: '*.png',
+            props: {
+              width: size,
+              customArgs: [
+                '-channel A -level 20,100%,0.85',
+                '+channel -background black -alpha background'
+              ]
+            },
+          }
+          return subtasks
+        }, {
+          'grayscale': {
+            from: 'assets/images/providers/',
+            to: 'assets/images/providers/grayscale/',
+            files: '*.png',
+            props: {
+              width: 128,
+              customArgs: [ '-fx', '(r+b+g)/3', '-matte' ]
+            },
+          }
+        }
+      ),
+
     compass: {
       quilt: {
         options: {
@@ -116,28 +145,6 @@ module.exports = function(grunt) {
       files: ['js/tests/*.html']
     },
 
-    connect: {
-      server: {
-        options: {
-          port: 3000,
-          base: '.'
-        }
-      }
-    },
-
-    jekyll: {
-      docs: {}
-    },
-
-    validation: {
-      options: {
-        reset: true
-      },
-      files: {
-        src: ["_gh_pages/**/*.html"]
-      }
-    },
-
     watch: {
       src: {
         files: '<%= jshint.src.src %>',
@@ -156,16 +163,15 @@ module.exports = function(grunt) {
 
 
   // These plugins provide necessary tasks.
+  grunt.loadNpmTasks('grunt-imagemagick');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
-  grunt.loadNpmTasks('grunt-contrib-connect');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-qunit');
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-html-validation');
-  grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('browserstack-runner');
   grunt.loadNpmTasks('assemble');
@@ -192,3 +198,5 @@ module.exports = function(grunt) {
   grunt.registerTask('default', ['dist']);
 
 };
+
+// vi: sw=2 sts=2 ts=2 expandtab
