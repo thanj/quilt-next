@@ -1,0 +1,392 @@
+{
+	"facebook": {
+		"text": "3B5998",
+		"background": "3B5998",
+		"displayname": "Facebook",
+		"buttontext": "Facebook",
+		"logo": {
+			"filename": "facebook.png",
+			"transparent": false
+		}
+	},
+	"twitter": {
+		"text": "27C9FF",
+		"background": "27C9FF",
+		"displayname": "Twitter",
+		"buttontext": "Twitter",
+		"logo": {
+			"filename": "twitter.png",
+			"transparent": false
+		}
+	},
+	"myspace": {
+		"text": "000",
+		"background": "000",
+		"displayname": "Myspace",
+		"buttontext": "Myspace",
+		"logo": {
+			"filename": "myspace.png",
+			"transparent": true
+		}
+	},
+	"instagram": {
+		"text": "517FA4",
+		"background": "517FA4",
+		"displayname": "Instagram",
+		"buttontext": "Instagram",
+		"logo": {
+			"filename": "instagram.png",
+			"transparent": false
+		}
+	},
+	"disqus": {
+		"text": "2E9FFF",
+		"background": "2E9FFF",
+		"displayname": "Disqus",
+		"buttontext": "Disqus",
+		"logo": {
+			"filename": "disqus.png",
+			"transparent": false
+		}
+	},
+	"microsoftaccount": {
+		"text": "3E73B4",
+		"background": "3E73B4",
+		"displayname": "Microsoft Account",
+		"buttontext": "Microsoft Account",
+		"logo": {
+			"filename": "microsoftaccount.png",
+			"transparent": false
+		}
+	},
+	"live_id": {
+		"text": "3E73B4",
+		"background": "3E73B4",
+		"displayname": "Windows Live ID",
+		"buttontext": "Windows Live ID",
+		"logo": {
+			"filename": "live_id.png",
+			"transparent": false
+		}
+	},
+	"yahoo": {
+		"text": "670267",
+		"background": "670267",
+		"displayname": "Yahoo",
+		"buttontext": "Yahoo",
+		"logo": {
+			"filename": "yahoo.png",
+			"transparent": false
+		}
+	},
+	"google": {
+		"text": "61A6FB",
+		"background": "61A6FB",
+		"displayname": "Google",
+		"buttontext": "Google",
+		"logo": {
+			"filename": "google.png",
+			"transparent": false
+		}
+	},
+	"googleplus": {
+		"text": "737373",
+		"background": "CC3732",
+		"displayname": "Google+",
+		"buttontext": "Google",
+		"logo": {
+			"filename": "googleplus.png",
+			"transparent": true
+		}
+	},
+	"openid": {
+		"text": "F8921C",
+		"background": "F8921C",
+		"displayname": "OpenID",
+		"buttontext": "OpenID",
+		"logo": {
+			"filename": "openid.png",
+			"transparent": true
+		}
+	},
+	"amazon": {
+		"text": "000",
+		"background": "FF9900",
+		"displayname": "Amazon",
+		"buttontext": "Amazon",
+		"logo": {
+			"filename": "amazon.png",
+			"transparent": true
+		}
+	},
+	"aol": {
+		"text": "000",
+		"background": "000",
+		"displayname": "Aol",
+		"buttontext": "Aol",
+		"logo": {
+			"filename": "aol.png",
+			"transparent": true
+		}
+	},
+	"livejournal": {
+		"text": "2B5889",
+		"background": "2B5889",
+		"displayname": "LiveJournal",
+		"buttontext": "LiveJournal",
+		"logo": {
+			"filename": "livejournal.png",
+			"transparent": true
+		}
+	},
+	"mixi": {
+		"text": "D1AD5A",
+		"background": "D1AD5A",
+		"displayname": "mixi",
+		"buttontext": "mixi",
+		"logo": {
+			"filename": "mixi.png",
+			"transparent": true
+		}
+	},
+	"myopenid": {
+		"text": "20499D",
+		"background": "20499D",
+		"displayname": "myOpenID",
+		"buttontext": "myOpenID",
+		"logo": {
+			"filename": "myopenid.png",
+			"transparent": true
+		}
+	},
+	"netlog": {
+		"text": "000",
+		"background": "000",
+		"displayname": "Netlog",
+		"buttontext": "Netlog",
+		"logo": {
+			"filename": "netlog.png",
+			"transparent": true
+		}
+	},
+	"flickr": {
+		"text": "0063DB",
+		"background": "0063DB",
+		"displayname": "Flickr",
+		"buttontext": "Flickr",
+		"logo": {
+			"filename": "flickr.png",
+			"transparent": true
+		}
+	},
+	"blogger": {
+		"text": "F7931E",
+		"background": "F7931E",
+		"displayname": "Blogger",
+		"buttontext": "Blogger",
+		"logo": {
+			"filename": "blogger.png",
+			"transparent": false
+		}
+	},
+	"verisign": {
+		"text": "FFC10C",
+		"background": "FFC10C",
+		"displayname": "Verisign",
+		"buttontext": "Verisign",
+		"logo": {
+			"filename": "verisign.png",
+			"transparent": true
+		}
+	},
+	"wordpress": {
+		"text": "21759B",
+		"background": "21759B",
+		"displayname": "WordPress",
+		"buttontext": "WordPress",
+		"logo": {
+			"filename": "wordpress.png",
+			"transparent": false
+		}
+	},
+	"hyves": {
+		"text": "FFAA00",
+		"background": "FFAA00",
+		"displayname": "Hyves",
+		"buttontext": "Hyves",
+		"logo": {
+			"filename": "hyves.png",
+			"transparent": false
+		}
+	},
+	"linkedin": {
+		"text": "005A87",
+		"background": "005A87",
+		"displayname": "LinkedIn",
+		"buttontext": "LinkedIn",
+		"logo": {
+			"filename": "linkedin.png",
+			"transparent": false
+		}
+	},
+	"paypal": {
+		"text": "1F356F",
+		"background": "1F356F",
+		"displayname": "PayPal",
+		"buttontext": "PayPal",
+		"logo": {
+			"filename": "paypal.png",
+			"transparent": true
+		}
+	},
+	"salesforce": {
+		"text": "333",
+		"background": "333",
+		"displayname": "Salesforce",
+		"buttontext": "Salesforce",
+		"logo": {
+			"filename": "salesforce.png",
+			"transparent": false
+		}
+	},
+	"orkut": {
+		"text": "B90C91",
+		"background": "B90C91",
+		"displayname": "orkut",
+		"buttontext": "orkut",
+		"logo": {
+			"filename": "orkut.png",
+			"transparent": true
+		}
+	},
+	"vzn": {
+		"text": "EE0000",
+		"background": "EE0000",
+		"displayname": "VZ Netzwerke",
+		"buttontext": "VZ Netzwerke",
+		"logo": {
+			"filename": "vzn.png",
+			"transparent": false
+		}
+	},
+	"tumblr": {
+		"text": "31516F",
+		"background": "31516F",
+		"displayname": "Tumblr",
+		"buttontext": "Tumblr",
+		"logo": {
+			"filename": "tumblr.png",
+			"transparent": false
+		}
+	},
+	"foursquare": {
+		"text": "1769B4",
+		"background": "1769B4",
+		"displayname": "Foursquare",
+		"buttontext": "Foursquare",
+		"logo": {
+			"filename": "foursquare.png",
+			"transparent": false
+		}
+	},
+	"sinaweibo": {
+		"text": "D72829",
+		"background": "D72829",
+		"displayname": "Sina Weibo",
+		"buttontext": "Sina Weibo",
+		"logo": {
+			"filename": "sinaweibo.png",
+			"transparent": true
+		}
+	},
+	"renren": {
+		"text": "005EAC",
+		"background": "005EAC",
+		"displayname": "Renren",
+		"buttontext": "Renren",
+		"logo": {
+			"filename": "renren.png",
+			"transparent": true
+		}
+	},
+	"soundcloud": {
+		"text": "FF4C13",
+		"background": "FF4C13",
+		"displayname": "SoundCloud",
+		"buttontext": "SoundCloud",
+		"logo": {
+			"filename": "soundcloud.png",
+			"transparent": false
+		}
+	},
+	"vk": {
+		"text": "45668E",
+		"background": "45668E",
+		"displayname": "VK",
+		"buttontext": "VK",
+		"logo": {
+			"filename": "vk.png",
+			"transparent": false
+		}
+	},
+	"xing": {
+		"text": "006567",
+		"background": "006567",
+		"displayname": "XING",
+		"buttontext": "XING",
+		"logo": {
+			"filename": "xing.png",
+			"transparent": false
+		}
+	},
+	"mydigipass": {
+		"text": "3F464B",
+		"background": "3F464B",
+		"displayname": "MYDIGIPASS.COM",
+		"buttontext": "MYDIGIPASS.COM",
+		"logo": {
+			"filename": "mydigipass.png",
+			"transparent": true
+		}
+	},
+	"onekey": {
+		"text": "C41166",
+		"background": "C41166",
+		"displayname": "OneKey",
+		"buttontext": "OneKey",
+		"logo": {
+			"filename": "onekey.png",
+			"transparent": true
+		}
+	},
+	"email": {
+		"text": "009DDC",
+		"background": "009DDC",
+		"displayname": "email",
+		"buttontext": "email",
+		"logo": {
+			"filename": "email.png",
+			"transparent": false
+		}
+	},
+	"placeholder": {
+		"text": "999",
+		"background": "999",
+		"displayname": "placeholder",
+		"buttontext": "placeholder",
+		"logo": {
+			"filename": "placeholder.png",
+			"transparent": false
+		}
+	},
+	"janrain": {
+		"text": "009DDC",
+		"background": "009DDC",
+		"displayname": "Janrain",
+		"buttontext": "Janrain",
+		"logo": {
+			"filename": "janrain.png",
+			"transparent": false
+		}
+	}
+}

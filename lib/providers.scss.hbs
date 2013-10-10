@@ -1,0 +1,140 @@
+@import "compass/css3/";
+@import "_mixins.scss";
+@import "_variables";
+
+$providers: {{#each providers}}{{@key}} {{/each}};
+$providersBGNeeded: {{#each providers}}{{#if this.logo.transparent}}{{@key}} {{/if}}{{/each}};
+
+// Produces icon classes including transparent and grayscale.
+// Provider name is required to generate class and locate correct asset.
+@mixin icons-janrain-provider-nonretina {
+	  @each $iconName in $providers {
+		  @each $size in $providerIconSizes {
+			.janrain-provider-icon-#{$size}.janrain-provider-icon-#{$iconName} {
+				background-image: image-url('icons/janrain-providers/#{$size}/#{$iconName}.png');
+			}
+		}
+	}
+}
+//Grayscale imgs
+@mixin icons-janrain-provider-grayscale {
+  @each $iconName in $providers {
+		.janrain-provider-icon-grayscale-#{$iconName} {
+			background-image: image-url('icons/janrain-providers/grayscale/#{$iconName}.png');
+			@include background-size (cover);
+		}
+	}
+}
+
+// White bg icon class for providers with black icons.
+// Quilt provides the white bg through CSS for selected providers.
+@mixin icons-janrain-provider-white-bg {
+	@each $iconName in $providersBGNeeded {
+	.janrain-provider-icon-bg.janrain-provider-icon-#{$iconName} {
+		background-image: image-url('icons/janrain-providers/#{$iconName}.png');
+		background-color: white;
+		@include background-size (80% 80%);
+		background-repeat: no-repeat;
+		background-position: center center;
+		}
+	}
+}
+//change twitter logo to have a bg for dark bg site/one row widget
+@mixin twitter-bg {
+	  @each $size in $providerIconSizes {
+		.janrain-provider-icon-#{$size}.janrain-provider-icon-bg.janrain-provider-icon-twitter {
+			background-image: image-url('icons/janrain-providers/#{$size}/twitter_bg.png');
+		}
+	}
+}
+// Width, height and border radius for icons in standard sizes.
+@mixin provider-size ($size, $radius) {
+	.janrain-provider-icon-#{$size} {
+		width: #{$size}px;
+		height: #{$size}px;
+		@include border-radius (#{$radius}px);
+	}
+}
+// Provides provider color to text, links, btns and bgs
+// Loaded from config file `providers-vars.json`; add new colors there
+{{#each providers}}
+    .janrain-provider-bg-color-{{@key}} {
+        background-color: #{{this.background}};
+	}
+    .janrain-provider-text-color-{{@key}} {
+        color: #{{this.text}} !important;
+	}
+    a.janrain-provider-text-color-{{@key}} {
+        color: #{{this.text}} !important;
+		&:hover {
+            color: darken(#{{this.text}}, 15) !important;
+		}
+	}
+{{/each}}
+
+*[class*="janrain-provider-icon-"] {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+//Generates all of the classes needed from the provider list above
+@include icons-janrain-provider-nonretina;
+
+//Custom open ID provider in Engage needs to scale icon
+.janrain-provider-icon-customopenid {
+	@include background-size (cover);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+//Grayscale scaled icons
+@include icons-janrain-provider-grayscale;
+
+//Generates the classes for providers that need a white bg for a dark bg site
+@include icons-janrain-provider-white-bg;
+
+//Generates the classes for providers that need a white bg for a dark bg site
+@include twitter-bg;
+
+// width/height, border-radius
+@include provider-size (48, 5);
+@include provider-size (32, 3);
+@include provider-size (24, 3);
+@include provider-size (16, 3);
+
+// Retina displays should use the full-size image with a background-size: cover scaling
+
+
+// Produces icon classes including transparent and grayscale.
+// Provider name is required to generate class and locate correct asset.
+@mixin icons-janrain-provider {
+	@each $iconName in $providers {
+		[class*="janrain-provider-icon-"].janrain-provider-icon-#{$iconName} {
+			background-image: image-url('icons/janrain-providers/#{$iconName}.png');
+		}
+		[class*="janrain-provider-icon-"].janrain-provider-icon-grayscale-#{$iconName} {
+			background-image: image-url('icons/janrain-providers/grayscale/#{$iconName}.png');
+		}
+	}
+}
+//change twitter logo to have a bg for dark bg site/one row widget
+@mixin twitter-bg {
+	[class*="janrain-provider-icon-"].janrain-provider-icon-twitter.janrain-provider-icon-bg {
+		background-image: image-url('icons/janrain-providers/twitter_bg.png');
+	}
+}
+// width/height, border-radius
+@media
+only screen and (-webkit-min-device-pixel-ratio: 1.1),
+only screen and (min-resolution: 100dpi) {
+
+*[class*="janrain-provider-icon-"] {
+  @include background-size (cover);
+}
+
+//Generates the classes needed from the provider list above
+	@include icons-janrain-provider;
+
+//Generates the classes for providers that need a white bg for a dark bg site
+	@include twitter-bg;
+}
+

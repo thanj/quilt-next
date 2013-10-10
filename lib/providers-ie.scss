@@ -1,0 +1,64 @@
+@import "compass/css3/";
+@import "_variables";
+@import "_mixins";
+
+$absolutePath: "https://d3hmp0045zy3cs.cloudfront.net";
+
+$providers: facebook twitter myspace instagram disqus microsoftaccount live_id yahoo google googleplus openid amazon aol livejournal mixi myopenid netlog flickr blogger verisign wordpress hyves linkedin paypal salesforce orkut vzn tumblr foursquare sinaweibo renren soundcloud vk xing mydigipass onekey email placeholder janrain ;
+$providersBGNeeded: myspace googleplus openid amazon aol livejournal mixi myopenid netlog flickr verisign paypal orkut sinaweibo renren mydigipass onekey ;
+
+@mixin icons-janrain-provider-nonretina {
+    @each $iconName in $providers {
+      @each $size in $providerIconSizes {
+      .janrain-provider-icon-#{$size}.janrain-provider-icon-#{$iconName} {
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/#{$size}/#{$iconName}.png')}', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/#{$size}/#{$iconName}.png')}', sizingMethod='scale')";
+        background-image: none;
+      }
+    }
+  }
+}
+
+@mixin icons-janrain-provider-white-bg {
+  @each $iconName in $providersBGNeeded {
+  .janrain-provider-icon-bg.janrain-provider-icon-#{$iconName} {
+    background-color: white;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/48/#{$iconName}.png')}', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/48/#{$iconName}.png')}', sizingMethod='scale')";
+    background-image: none;
+    }
+  }
+}
+
+@mixin icons-janrain-provider-grayscale {
+  @each $iconName in $providers {
+    .janrain-provider-icon-grayscale-#{$iconName} {
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/grayscale/#{$iconName}.png')}', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/grayscale/#{$iconName}.png')}', sizingMethod='scale')";
+    background-image: none;
+    }
+  }
+}
+
+//change twitter logo to have a bg for dark bg site/one row widget
+@mixin twitter-bg {
+    @each $size in $providerIconSizes {
+    .janrain-provider-icon-#{$size}.janrain-provider-icon-bg.janrain-provider-icon-twitter {
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/#{$size}/twitter_bg.png')}', sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/#{$size}/twitter_bg.png')}', sizingMethod='scale')";
+      background-image: none;
+    }
+  }
+}
+@include icons-janrain-provider-nonretina;
+
+@include icons-janrain-provider-white-bg;
+
+@include icons-janrain-provider-grayscale;
+
+@include twitter-bg;
+
+*[class*="janrain-provider-icon-"] {
+  @include inline-block;
+  vertical-align: middle;
+}

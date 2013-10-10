@@ -69,6 +69,22 @@ module.exports = function(grunt) {
       }
     },
 
+    assemble: {
+      options: {
+        data: 'assets/js/providers.json',
+        ext: ''
+      },
+      providers: {
+        files: {
+          '.': [
+            'lib/providers.scss.hbs',
+            'lib/providers-ie.scss.hbs',
+            'assets/js/provider-config.json.hbs'
+          ],
+        }
+      }
+    },
+
     compass: {
       quilt: {
         options: {
@@ -76,12 +92,12 @@ module.exports = function(grunt) {
           cssDir: 'dist/css/'
         }
       },
-      min: {
+      providers: {
         options: {
-          outputStyle: 'compressed'
+          outputStyle: 'compressed',
+          sassDir: 'lib/providers.scss',
+          cssDir: 'dist/css/<%= pkg.name %>.min.css'
         },
-        src: ['lib/quilt.scss'],
-        dest: 'dist/css/<%= pkg.name %>.min.css'
       }
     },
 
@@ -152,6 +168,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-jekyll');
   grunt.loadNpmTasks('grunt-contrib-compass');
   grunt.loadNpmTasks('browserstack-runner');
+  grunt.loadNpmTasks('assemble');
 
   // Docs HTML validation task
   grunt.registerTask('validate-html', ['jekyll', 'validation']);
@@ -169,29 +186,9 @@ module.exports = function(grunt) {
   grunt.registerTask('dist-fonts', ['copy']);
 
   // Full distribution task.
-  grunt.registerTask('dist', ['clean', 'dist-css', 'dist-fonts', 'dist-js']);
+  grunt.registerTask('dist', ['clean', 'assemble', 'dist-css', 'dist-fonts', 'dist-js']);
 
   // Default task.
-  grunt.registerTask('default', ['dist', 'build-customizer']);
+  grunt.registerTask('default', ['dist']);
 
-  // task for building customizer
-  grunt.registerTask('build-customizer', 'Add scripts/less files to customizer.', function () {
-    var fs = require('fs')
-
-    function getFiles(type) {
-      var files = {}
-      fs.readdirSync(type)
-        .filter(function (path) {
-          return type == 'fonts' ? true : new RegExp('\\.' + type + '$').test(path)
-        })
-        .forEach(function (path) {
-          return files[path] = fs.readFileSync(type + '/' + path, 'utf8')
-        })
-      return 'var __' + type + ' = ' + JSON.stringify(files) + '\n'
-    }
-
-    var customize = fs.readFileSync('customize.html', 'utf-8')
-    var files = getFiles('js') + getFiles('fonts')
-    fs.writeFileSync('assets/js/raw-files.js', files)
-  });
 };
