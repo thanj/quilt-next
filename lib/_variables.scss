@@ -25,7 +25,7 @@ $orange:              #F58002; // Alternate tertiary header on dark backgrounds,
 
 $black:               #000000; // Primary header color on light backgrounds
 $white:               #FFFFFF; // Primary header color on dark backgrounds
- 
+
 /* Secondary Accent Colors: active UI states to use against dark backgrounds */
 $blue-bright:         #E6F0F5; // a UI element which is changing state; secondary header
 $green-bright:        #7AC143; // successful change of state; positive trend; tertiary header
@@ -71,6 +71,7 @@ $text-color:            $gray-dark !default;
 
 $link-color:            $brand-primary !default;
 $link-hover-color:      darken($link-color, 15%) !default;
+$link-visited-color:    spin($link-color, 15%) !default;
 
 // Typography
 // -------------------------

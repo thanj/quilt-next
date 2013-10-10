@@ -1,3 +1,4 @@
+@import "compass/css3/transition";
 @import '_variables';
 @import '_mixins';
 
@@ -350,7 +351,7 @@ th.hide-for-touch { display: table-cell !important; }
         right: -180px;
         padding: 0;
         text-align: left;
-        
+
         .home_link {
             width: 122px;
             float: none;
@@ -412,7 +413,7 @@ th.hide-for-touch { display: table-cell !important; }
         }
     }
 
-    body, .global_nav, .sidebar_col { 
+    body, .global_nav, .sidebar_col {
         @include single-transition( all, .25s, ease-in );
     }
 
@@ -458,7 +459,7 @@ th.hide-for-touch { display: table-cell !important; }
         right: 0;
         padding: 0;
         text-align: left;
-        
+
         .home_link {
             width: 122px;
             float: none;

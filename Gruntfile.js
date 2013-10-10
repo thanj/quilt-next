@@ -63,16 +63,18 @@ module.exports = function(grunt) {
       options: {
         banner: '<%= banner %>'
       },
-      bootstrap: {
+      quilt: {
         src: ['<%= concat.bootstrap.dest %>'],
         dest: 'dist/js/<%= pkg.name %>.min.js'
       }
     },
 
     compass: {
-      bootstrap: {
-        src: ['lib/quilt.scss'],
-        dest: 'dist/css/<%= pkg.name %>.css'
+      quilt: {
+        options: {
+          sassDir: 'lib/quilt.scss',
+          cssDir: 'dist/css/'
+        }
       },
       min: {
         options: {

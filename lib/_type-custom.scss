@@ -6,6 +6,12 @@
   font-family: "proxima-nova", helvetica;
 }
 
+@mixin ul ($type: none, $padding: 0, $margin: 0) {
+	list-style-type: $type;
+	padding: $padding;
+	margin: $margin;
+}
+
 // Clearfix for clearing floats like a boss h5bp.com/q
 .clearfix {
 	zoom: 1;
@@ -71,7 +77,7 @@ h1 {
 }
 h2 {
 	font-size: 1.625em;
-	color: desaturate( lighten( $slate-alt, 35 ), 15 ); 
+	color: desaturate( lighten( $slate-alt, 35 ), 15 );
 	font-weight: 500;
 }
 h3 {
@@ -106,7 +112,7 @@ p {
 }
 
 .x-small-text {
-	font-size: 13px; 
+	font-size: 13px;
 	line-height: 18px;
 	h1, h2, h3, h4, h5, h6 {
 		line-height: 1.230769;
@@ -122,24 +128,30 @@ a:link {
 	text-decoration: none;
 }
 a:visited {
-	color: $link-visited;
+	color: $link-visited-color;
 }
 a:hover {
-	color: $link-hover;
+	color: $link-hover-color;
 }
 
 hr {
-	@include hr;
+    height: 0;
+    border-style: solid none none;
+    border-width: 1px 0 0;
+    border-color: #e3e3e3;
+    box-shadow: none;
+    margin: 1em 0;
+    width: 100%;
+    clear: both;
 }
 
 hr.blur {
- 	border: 0;
-  height: 3px;
- 	@include box-shadow (none);
-  @include background (linear-gradient(left, transparent, rgba(0,0,0,0.1), transparent));
+    border: 0;
+    height: 3px;
+    @include box-shadow (none);
+    background: linear-gradient(left, transparent, rgba(0,0,0,0.1), transparent);
 }
 input, select, textarea, button {
-	@include janrain-font;
 	border: 0;
 }
 
@@ -210,16 +222,6 @@ dl {
   }
 }
 
-// Lists that should be broken into columns, in browsers that support that
-.columns-list {
-    @include column-width( 20em );
-    @include column-gap( 1em );
-}
-
-.columns-4 { @include column-count( 4 ); }
-.columns-3 { @include column-count( 3 ); }
-.columns-2 { @include column-count( 2 ); }
-
 pre, code, tt {
 	font-family: "Ubuntu Mono", monospace;
     font-weight: 700;
@@ -231,7 +233,7 @@ pre, code, tt {
 	font-size: 13px;
 	background: #fbfbfb;
 	border: 1px solid rgba(0,0,0,0.1);
-	@include border-radius(3px);
+	border-radius: 3px;
 	padding: 2px 4px;
 }
 
