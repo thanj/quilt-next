@@ -11,7 +11,7 @@ $providersBGNeeded: myspace googleplus openid amazon aol livejournal mixi myopen
 	  @each $iconName in $providers {
 		  @each $size in $providerIconSizes {
 			.janrain-provider-icon-#{$size}.janrain-provider-icon-#{$iconName} {
-				background-image: image-url('icons/janrain-providers/#{$size}/#{$iconName}.png');
+				background-image: image-url('providers/#{$size}/#{$iconName}.png');
 			}
 		}
 	}
@@ -20,7 +20,7 @@ $providersBGNeeded: myspace googleplus openid amazon aol livejournal mixi myopen
 @mixin icons-janrain-provider-grayscale {
   @each $iconName in $providers {
 		.janrain-provider-icon-grayscale-#{$iconName} {
-			background-image: image-url('icons/janrain-providers/grayscale/#{$iconName}.png');
+			background-image: image-url('providers/grayscale/#{$iconName}.png');
 			@include background-size (cover);
 		}
 	}
@@ -31,7 +31,7 @@ $providersBGNeeded: myspace googleplus openid amazon aol livejournal mixi myopen
 @mixin icons-janrain-provider-white-bg {
 	@each $iconName in $providersBGNeeded {
 	.janrain-provider-icon-bg.janrain-provider-icon-#{$iconName} {
-		background-image: image-url('icons/janrain-providers/#{$iconName}.png');
+		background-image: image-url('providers/#{$iconName}.png');
 		background-color: white;
 		@include background-size (80% 80%);
 		background-repeat: no-repeat;
@@ -43,7 +43,7 @@ $providersBGNeeded: myspace googleplus openid amazon aol livejournal mixi myopen
 @mixin twitter-bg {
 	  @each $size in $providerIconSizes {
 		.janrain-provider-icon-#{$size}.janrain-provider-icon-bg.janrain-provider-icon-twitter {
-			background-image: image-url('icons/janrain-providers/#{$size}/twitter_bg.png');
+			background-image: image-url('providers/#{$size}/twitter_bg.png');
 		}
 	}
 }
@@ -603,17 +603,17 @@ $providersBGNeeded: myspace googleplus openid amazon aol livejournal mixi myopen
 @mixin icons-janrain-provider {
 	@each $iconName in $providers {
 		[class*="janrain-provider-icon-"].janrain-provider-icon-#{$iconName} {
-			background-image: image-url('icons/janrain-providers/#{$iconName}.png');
+			background-image: image-url('providers/#{$iconName}.png');
 		}
 		[class*="janrain-provider-icon-"].janrain-provider-icon-grayscale-#{$iconName} {
-			background-image: image-url('icons/janrain-providers/grayscale/#{$iconName}.png');
+			background-image: image-url('providers/grayscale/#{$iconName}.png');
 		}
 	}
 }
 //change twitter logo to have a bg for dark bg site/one row widget
 @mixin twitter-bg {
 	[class*="janrain-provider-icon-"].janrain-provider-icon-twitter.janrain-provider-icon-bg {
-		background-image: image-url('icons/janrain-providers/twitter_bg.png');
+		background-image: image-url('providers/twitter_bg.png');
 	}
 }
 // width/height, border-radius

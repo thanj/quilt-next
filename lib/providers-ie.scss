@@ -11,8 +11,8 @@ $providersBGNeeded: myspace googleplus openid amazon aol livejournal mixi myopen
     @each $iconName in $providers {
       @each $size in $providerIconSizes {
       .janrain-provider-icon-#{$size}.janrain-provider-icon-#{$iconName} {
-        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/#{$size}/#{$iconName}.png')}', sizingMethod='scale');
-        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/#{$size}/#{$iconName}.png')}', sizingMethod='scale')";
+        filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('providers/#{$size}/#{$iconName}.png')}', sizingMethod='scale');
+        -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('providers/#{$size}/#{$iconName}.png')}', sizingMethod='scale')";
         background-image: none;
       }
     }
@@ -23,8 +23,8 @@ $providersBGNeeded: myspace googleplus openid amazon aol livejournal mixi myopen
   @each $iconName in $providersBGNeeded {
   .janrain-provider-icon-bg.janrain-provider-icon-#{$iconName} {
     background-color: white;
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/48/#{$iconName}.png')}', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/48/#{$iconName}.png')}', sizingMethod='scale')";
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('providers/48/#{$iconName}.png')}', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('providers/48/#{$iconName}.png')}', sizingMethod='scale')";
     background-image: none;
     }
   }
@@ -33,8 +33,8 @@ $providersBGNeeded: myspace googleplus openid amazon aol livejournal mixi myopen
 @mixin icons-janrain-provider-grayscale {
   @each $iconName in $providers {
     .janrain-provider-icon-grayscale-#{$iconName} {
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/grayscale/#{$iconName}.png')}', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/grayscale/#{$iconName}.png')}', sizingMethod='scale')";
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('providers/grayscale/#{$iconName}.png')}', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('providers/grayscale/#{$iconName}.png')}', sizingMethod='scale')";
     background-image: none;
     }
   }
@@ -44,8 +44,8 @@ $providersBGNeeded: myspace googleplus openid amazon aol livejournal mixi myopen
 @mixin twitter-bg {
     @each $size in $providerIconSizes {
     .janrain-provider-icon-#{$size}.janrain-provider-icon-bg.janrain-provider-icon-twitter {
-      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/#{$size}/twitter_bg.png')}', sizingMethod='scale');
-      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('icons/janrain-providers/#{$size}/twitter_bg.png')}', sizingMethod='scale')";
+      filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('providers/#{$size}/twitter_bg.png')}', sizingMethod='scale');
+      -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='#{$absolutePath}#{image-path('providers/#{$size}/twitter_bg.png')}', sizingMethod='scale')";
       background-image: none;
     }
   }

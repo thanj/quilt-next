@@ -117,8 +117,10 @@ module.exports = function(grunt) {
     compass: {
       quilt: {
         options: {
-          sassDir: 'lib/quilt.scss',
-          cssDir: 'dist/css/'
+          sassDir: 'lib/',
+          cssDir: 'dist/css/',
+          imagesDir: 'assets/images',
+          outputStyle: 'compressed',
         }
       },
       providers: {
