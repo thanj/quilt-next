@@ -1,4 +1,3 @@
-@import "bourbon/bourbon";
 @import "mixins";
 @import "_janrain-mixins";
 @import "_janrain-font";
@@ -258,7 +257,7 @@ html, body {
 
     .selected {
         > a, > a:hover {
-            @include linear-gradient(to bottom, $white, $gray-lighter);
+            background: linear-gradient(to bottom, $white, $gray-lighter);
             color: $gray-darker;
         }
     }
@@ -286,7 +285,7 @@ html, body {
 
     .expanded {
         > a, > a:hover {
-            @include linear-gradient(to bottom, $white, $gray-lighter);
+            background: linear-gradient(to bottom, $white, $gray-lighter);
             &:after {
                 background: white;
                 color: $river-gray;
@@ -345,7 +344,7 @@ html, body {
         width: 100%;
         height: 15em;
         bottom: -15em;
-        @include linear-gradient( to bottom, $sky-light, $white );
+        background: linear-gradient( to bottom, $sky-light, $white );
     }
 
 }
