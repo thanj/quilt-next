@@ -448,9 +448,9 @@ html, body {
 .main_nav {
 	@include ul(none, 0, auto);
 	float: left;
-	@include inline-block;
+	display: inline-block;
 	> li {
-		@include inline-block;
+		display: inline-block;
 		white-space: nowrap;
 		> a {
 			font-size: 15px;
