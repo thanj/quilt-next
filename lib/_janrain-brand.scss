@@ -345,6 +345,7 @@ html, body {
         height: 15em;
         bottom: -15em;
         background: linear-gradient( to bottom, $sky-light, $white );
+        z-index: -1;
     }
 
 }
