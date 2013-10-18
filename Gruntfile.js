@@ -95,8 +95,8 @@ module.exports = function(grunt) {
             props: {
               width: size,
               customArgs: [
-                '-channel A -level 20,100%,0.85',
-                '+channel -background black -alpha background'
+                '-channel','A','-level','20,100%,0.85','+channel',
+                '-background','black','-alpha','background'
               ]
             },
           }
