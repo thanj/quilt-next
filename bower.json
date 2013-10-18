@@ -1,7 +1,7 @@
 {
   "name": "quilt-next",
   "private": "true",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "main": ["./dist/js/bootstrap.js", "./dist/css/bootstrap.css"],
   "ignore": [
       "**/.*"

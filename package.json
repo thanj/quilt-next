@@ -1,7 +1,7 @@
 {
   "name": "quilt-next",
   "description": "UI framework for Janrain products, based on Sass-Bootstrap",
-  "version": "3.0.7",
+  "version": "3.0.8",
   "keywords": [
     "bootstrap",
     "css"
