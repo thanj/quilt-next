@@ -599,12 +599,18 @@ html, body {
 
 	input[type="search"] {
 		border: medium none;
+        line-height: 1;
+        vertical-align: middle;
 		color: $white;
 		@include font-size(14px);
 		width: 240px;
         height: 30px;
         padding: 0 .5em;
 	}
+
+    ::-webkit-input-placeholder { line-height: normal; vertical-align: middle; }
+    ::-ms-input-placeholder { line-height: 1; vertical-align: middle; }
+    ::-moz-placeholder { line-height: 1; vertical-align: middle; }
 
     .input-search-submit {
         width: 32px;
