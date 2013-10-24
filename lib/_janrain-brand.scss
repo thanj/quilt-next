@@ -609,8 +609,8 @@ html, body {
 	}
 
     ::-webkit-input-placeholder { line-height: normal; vertical-align: middle; }
-    ::-ms-input-placeholder { line-height: 1; vertical-align: middle; }
-    ::-moz-placeholder { line-height: 1; vertical-align: middle; }
+    :-ms-input-placeholder      { line-height: normal; vertical-align: middle; }
+    :-moz-placeholder           { line-height: normal; vertical-align: middle; }
 
     .input-search-submit {
         width: 32px;

@@ -1,5 +1,5 @@
 /**
-* quilt-next.js v3.0.7 by @fat and @mdo
+* quilt-next.js v3.0.8 by @fat and @mdo
 * Copyright 2013 Janrain UX Team
 * http://www.wtfpl.net/about/
 */
