@@ -2,7 +2,7 @@
 @import "_mixins.scss";
 @import "_variables";
 
-$providers: janrain placeholder email fimnet medikey doccheck onekey mydigipass xing vk myopenid mixi livejournal aol amazon openid googleplus google facebook twitter myspace instagram disqus microsoftaccount live_id yahoo netlog flickr blogger verisign wordpress hyves linkedin paypal salesforce orkut vzn tumblr foursquare sinaweibo renren soundcloud ;
+$providers: janrain placeholder email fimnet medikey doccheck onekey mydigipass xing vk myopenid mixi livejournal aol amazon openid googleplus google facebook twitter myspace instagram disqus microsoftaccount live_id yahoo netlog flickr blogger verisign wordpress hyves linkedin paypal salesforce orkut vzn tumblr foursquare sinaweibo renren tencentweibo soundcloud ;
 $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal aol amazon openid googleplus myspace netlog flickr verisign paypal orkut sinaweibo renren ;
 
 // Produces icon classes including transparent and grayscale.
@@ -588,6 +588,19 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
         color: #005EAC !important;
 		&:hover {
             color: darken(#005EAC, 15) !important;
+		}
+	}
+
+    .janrain-provider-bg-color-tencentweibo {
+        background-color: #20B8E5;
+	}
+    .janrain-provider-text-color-tencentweibo {
+        color: #20B8E5 !important;
+	}
+    a.janrain-provider-text-color-tencentweibo {
+        color: #20B8E5 !important;
+		&:hover {
+            color: darken(#20B8E5, 15) !important;
 		}
 	}
 

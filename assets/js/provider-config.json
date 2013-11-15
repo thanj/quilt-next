@@ -410,6 +410,16 @@ onProviderConfigLoaded(
     "background": "005EAC",
     "text": "005EAC"
   },
+  "tencentweibo": {
+    "logo": {
+      "transparent": false,
+      "filename": "tencentweibo.png"
+    },
+    "buttontext": "Tencent Weibo",
+    "displayname": "Tencent Weibo",
+    "background": "20B8E5",
+    "text": "20B8E5"
+  },
   "soundcloud": {
     "logo": {
       "transparent": false,
