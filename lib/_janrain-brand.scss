@@ -598,22 +598,21 @@ html, body {
     padding: 0 .5em;
 
 	input[type="search"] {
-      border: medium none;
-      line-height: 1;
-      vertical-align: middle;
-      color: $white;
-      @include font-size(14px);
-      width: 240px;
-      height: 30px;
-      padding: 0 .5em;
-      -webkit-appearance: textfield;
-      -moz-appearance:    textfield;
-      appearance:         textfield;
+		border: medium none;
+        line-height: 1;
+        vertical-align: middle;
+		color: $white;
+		@include font-size(14px);
+		width: 240px;
+        height: 30px;
+        padding: 0 .5em;
+        -webkit-appearance: textfield;
+        -moz-appearance:    textfield;
+        appearance:         textfield;
 	}
 
     ::-webkit-input-placeholder { line-height: normal; vertical-align: middle; }
     :-ms-input-placeholder      { line-height: normal; vertical-align: middle; }
-    ::-moz-placeholder          { line-height: normal; vertical-align: middle; }
     :-moz-placeholder           { line-height: normal; vertical-align: middle; }
 
     .input-search-submit {
