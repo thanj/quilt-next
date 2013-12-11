@@ -5,18 +5,18 @@
 // Janrain Brand Colors
 // --------------------------------------------------
 
-/* SKY: light theme backgrounds, text on dark backgrounds */
-$sky:                 #E6F0F5; // light theme background color
-$sky-alt:             #D3E5EE; // UI element groupings
-$sky-light:           lighten( $sky, 3 ); // body background color
+// Basic colors
+$sky:              #F4EFE6;
+$teal:             #22BBB8;
+$turquoise:        #1A757D;
+$orange:           #F05A27;
 
-/* SLATE: dark theme backgrounds, text on light backgrounds */
-$slate:               #1A2D3A; // dark theme background color
-$slate-alt:           #0D161C; // global nav bar
+// Light color scheme; alternates
+$light-sky:        #F6F5F2;
+$light-teal:       #6FD3D1;
+$light-turquoise:  #6AA5AA;
+$light-orange:     #F59472;
 
-/* RIVER: navigation and anchoring: nav bars, table headers, title bars */
-$river-blue:          #127FBF; // primary navigation bar
-$river-gray:          #677E8E; // table headers, title bars and step bars in wizard
 
 /* Primary Accent Colors: Brand Colors */
 $blue:                #009DDC; // Janrain logo
@@ -32,11 +32,10 @@ $green-bright:        #7AC143; // successful change of state; positive trend; te
 $orange-bright:       #FEBE40; // unsuccessful action; negative trend; quaternary header
 
 /* Utility Colors */
-$action:              $blue;   // Default link color, icon-blue icons
-$success:             $green;  // Submit button elements, success messages, icon-green icons
-$alert:               #F57003; // "Warning" alert messages, icon-orange icons,
+$action:              $teal;   // Default link color, icon-blue icons
+$success:             $turquoise;  // Submit button elements, success messages, icon-green icons
+$alert:               $orange; // "Warning" alert messages, icon-orange icons,
 $warning:             #CC3300; // "Error" alert messages, icon-red icon
-
 
 
 $providerIconSizes: 16 24 32 48;
@@ -44,26 +43,29 @@ $providerIconSizes: 16 24 32 48;
 $iconStandardSizes: 16 24 32 48 64;
 $iconStandardColors: (green, $success), (blue, $action), (white, $white), (orange, $alert), (red, $warning);
 
-$gray-darker:            lighten(#000, 13.5%) !default; // #222
-$gray-dark:              lighten(#000, 20%) !default;   // #333
-$gray:                   lighten(#000, 33.5%) !default; // #555
-$gray-light:             lighten(#000, 60%) !default;   // #999
-$gray-lighter:           lighten(#000, 93.5%) !default; // #eee
-$gray-lightest:          lighten(#000, 96.5%) !default; // #f6f6f6
+// Grays: text and monochromes
+$black:          #030302 !default;
+$gray-darker:    lighten( $black, 13.5%) !default;
+$gray-dark:      #3D3A33 !default;
+$gray:           lighten( $gray-dark, 10 ) !default;
+$gray-light:     lighten( $gray-dark, 34 ) !default;
+$gray-lighter:   lighten( $gray-dark, 70 ) !default;
+$gray-lightest:  lighten( $gray-dark, 75 ) !default;
+
 
 // Brand colors
 // -------------------------
 
-$brand-primary:         $action !default;
+$brand-primary:         $orange !default;
 $brand-success:         $success !default;
 $brand-warning:         $alert !default;
 $brand-danger:          $warning !default;
-$brand-info:            $sky-alt !default;
+$brand-info:            $gray-light !default;
 
 // Scaffolding
 // -------------------------
 
-$body-bg:               $sky-light !default;
+$body-bg:               $light-sky !default;
 $text-color:            $gray-dark !default;
 
 // Links

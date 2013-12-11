@@ -6,7 +6,7 @@ html, body {
 	font-family: Helvetica, Arial, sans-serif;
 	text-align: left;
 	font-weight: normal;
-	color: $slate;
+	color: $gray-dark;
 	height: 100%;
 	min-height: 100%;
 	margin: 0;
@@ -19,7 +19,7 @@ html, body {
 	width: 100%;
     @include box-sizing( border-box );
     padding: 0 1em;
-    background-color: $slate;
+    background-color: $gray-dark;
 	.home_link {
 		display: block;
 		float: left;
@@ -50,7 +50,7 @@ html, body {
 			vertical-align: middle;
 			text-transform: uppercase;
             &.profile {
-                background: $slate-alt;
+                background: $gray;
                 text-transform: none;
                 > a {
 					font-size: 15px;
@@ -310,7 +310,7 @@ html, body {
                 &.selected, &.current_page_item {
 
                     a {
-                        color: $slate;
+                        color: $teal;
                         font-weight: 700;
                         padding: none;
                     }
@@ -504,7 +504,7 @@ html, body {
 		float: left;
 		padding: 0 1em;
 		&:last-child a {
-			color: lighten($slate, 40);
+			color: $turquoise;
 			cursor: default;
 			&:hover {
 				text-decoration: none;
@@ -532,8 +532,8 @@ html, body {
 			right: -1.25em;
 			top: 1.375em;
 			@include rotate(45deg);
-			border-top: 1px solid $slate-alt;
-			border-right: 1px solid $slate-alt;
+			border-top: 1px solid $gray;
+			border-right: 1px solid $gray;
 		}
 	}
 }
@@ -559,7 +559,7 @@ html, body {
         cursor: pointer;
         &.active {
             background: $sky-alt;
-            color: $slate;
+            color: $gray-dark;
         }
     }
 
