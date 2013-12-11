@@ -140,7 +140,7 @@ html, body {
 	min-height: calc(100% - 90px);
 	width: 300px;
 	position: fixed;
-	background: $sky-light;
+	background: $light-sky;
     overflow-x: hidden;
 }
 
@@ -344,7 +344,7 @@ html, body {
         width: 100%;
         height: 15em;
         bottom: -15em;
-        background: linear-gradient( to bottom, $sky-light, $white );
+        background: linear-gradient( to bottom, $light-sky, $white );
         z-index: -1;
     }
 
