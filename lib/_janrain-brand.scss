@@ -113,14 +113,14 @@ html, body {
 
 	// Color overrides for elements which can appear elsewhere with different color backgrounds
 	.breadcrumbs li {
-        color: $sky-alt;
+        color: $sky;
 		a, a:link, a:hover {
 			color: $white;
 			&:after {
 				border-color: $sky;
 			}
 		}
-		&:last-child a { color: $sky-alt; }
+		&:last-child a { color: $sky; }
 	}
 }
 
@@ -416,7 +416,7 @@ html, body {
     width: 175px;
     text-align: left;
     > li > a {
-        color: $sky-alt;
+        color: $sky;
         display: block;
         padding: 5px 10px;
         text-transform: capitalize;
@@ -467,7 +467,7 @@ html, body {
 				margin: 0px 5px 0 0;
 			}
 			&:visited, &:link {
-				color: $sky-alt;
+				color: $sky;
 			}
 			&:hover {
 				color: $white;
@@ -552,13 +552,13 @@ html, body {
         vertical-align: top;
         background: $action;
         font-size: 22px;
-        color: $sky-alt;
+        color: $sky;
         &:hover {
             background: fade-out($white, .5);
         }
         cursor: pointer;
         &.active {
-            background: $sky-alt;
+            background: $sky;
             color: $gray-dark;
         }
     }
@@ -623,7 +623,7 @@ html, body {
         background: transparent;
         border: none;
         @include font-size(16px);
-        color: $sky-alt;
+        color: $sky;
         &:hover, &:active {
             color: $white;
             background: transparent;
