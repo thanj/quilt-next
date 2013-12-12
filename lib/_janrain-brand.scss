@@ -176,7 +176,7 @@ html, body {
       a {
         display: block;
         padding: .5em 1em;
-        color: $river-gray;
+        color: $turquoise;
         &:hover {
           background: darken( $sky, 3 );
         }
@@ -233,13 +233,13 @@ html, body {
       display: block;
       padding: .5em 1em;
       box-sizing: border-box;
-      color: $river-gray;
+      color: $turquoise;
       font-weight: 400;
       &:hover {
         background: fade-out($white, .6);
       }
       &[href] {
-        color: $river-blue;
+        color: $turquoise;
       }
     }
     &.last {
@@ -288,7 +288,7 @@ html, body {
       background: linear-gradient(to bottom, $white, $gray-lighter);
       &:after {
         background: white;
-        color: $river-gray;
+        color: $turquoise;
         cursor: pointer;
       }
     }
@@ -407,7 +407,7 @@ html, body {
 .subnav {
   display: none;
   @include ul (none, 7px 0, 0);
-  background: $river-blue none;
+  background: $teal none;
   border-radius: 5px;
   position: absolute;
   top: 100%;
@@ -423,11 +423,11 @@ html, body {
     &:hover {
       @include hover-transition;
       color: $white;
-      background: $river-blue;
+      background: $light-teal;
     }
   }
   .selected a {
-    background: $river-blue;
+    background: $light-teal;
   }
   .selected a:before {
     content: '\2192\00a0';
@@ -438,7 +438,7 @@ html, body {
     right: 11px;
     width: 24px;
     height: 24px;
-    color: $river-blue;
+    color: $gray;
     z-index: 1;
     top: -8px;
   }
