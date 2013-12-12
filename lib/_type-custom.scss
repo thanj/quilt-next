@@ -7,27 +7,27 @@
 }
 
 @mixin ul ($type: none, $padding: 0, $margin: 0) {
-	list-style-type: $type;
-	padding: $padding;
-	margin: $margin;
+  list-style-type: $type;
+  padding: $padding;
+  margin: $margin;
 }
 
 // Clearfix for clearing floats like a boss h5bp.com/q
 .clearfix {
-	zoom: 1;
-	&:before, &:after {
+  zoom: 1;
+  &:before, &:after {
     display: table;
     content: "";
-	    zoom: 1;
-    	*display: inline;
-	}
-	&:after {
-	clear: both;
-	}
+    zoom: 1;
+    *display: inline;
+  }
+  &:after {
+    clear: both;
+  }
 }
 .inline {
-    @include inline-block;
-    vertical-align: middle;
+  @include inline-block;
+  vertical-align: middle;
 }
 .right {float: right;}
 .left {float: left;}
@@ -35,24 +35,24 @@
 .vertMiddle {vertical-align: middle;}
 
 pre {
-	white-space: pre-wrap;       /* css-3 */
-	white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-	white-space: -pre-wrap;      /* Opera 4-6 */
-	white-space: -o-pre-wrap;    /* Opera 7 */
-	word-wrap: break-word;       /* Internet Explorer 5.5+ */
+  white-space: pre-wrap;       /* css-3 */
+  white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+  white-space: -pre-wrap;      /* Opera 4-6 */
+  white-space: -o-pre-wrap;    /* Opera 7 */
+  word-wrap: break-word;       /* Internet Explorer 5.5+ */
 }
 
 * {
-	word-wrap: break-word;
+  word-wrap: break-word;
 }
 
 strong {
-	color: #555;
-	font-weight: bold;
+  color: #555;
+  font-weight: bold;
 }
 
 br {
-	clear: both;
+  clear: both;
 }
 
 /*
@@ -61,43 +61,44 @@ br {
  * All headers should be defined in relation to the base-font size for their containing element
  */
 h1, h2, h3, h4, h5, h6 {
-	font-weight: normal;
-	color: $slate-alt;
-	line-height: 1;
-	margin: 24px 0 12px 0;
-	&:first-child { margin-top: 0; }
+  font-weight: normal;
+  color: $gray-dark;
+  line-height: 1;
+  margin: 24px 0 12px 0;
+  &:first-child { margin-top: 0; }
 }
 h1 {
-	font-size: 2em;
-	color: $slate;
-	font-weight: 100;
-    border-bottom: 1px solid $gray-lighter;
-    padding-bottom: 8px;
-	margin-bottom: 24px;
+  font-size: 2em;
+  color: $turquoise;
+  font-weight: 600;
+  border-bottom: 1px solid $gray-lighter;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
 }
 h2 {
-	font-size: 1.625em;
-	color: desaturate( lighten( $slate-alt, 35 ), 15 );
-	font-weight: 500;
+  font-size: 1.625em;
+  color: $gray-dark;
+  font-weight: 300;
+  font-style: italic;
 }
 h3 {
-	font-size: 1.5em;
-	font-weight: 100;
+  font-size: 1.5em;
+  font-weight: 100;
 }
 h4 {
-	font-size: 1.25em;
-    color: desaturate( lighten( $slate-alt, 35 ), 15 );
-	font-weight: 700;
+  font-size: 1.25em;
+  color: $teal;
+  font-weight: 700;
 }
 h5 {
-	font-size: 1em;
-	font-weight: 700;
-	text-transform: uppercase;
-	color: desaturate( lighten( $slate, 35 ), 15 );
+  font-size: 1em;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: $gray;
 }
 
 p {
-	margin: 0 0 12px 0;
+  margin: 0 0 12px 0;
 }
 
 /*
@@ -105,67 +106,67 @@ p {
  * the effect should be the same either way.
  */
 .small-text {
-	font-size: 14px;
-	h1, h2, h3, h4, h5, h6 {
-		line-height: 1.142857;
-	}
+  font-size: 14px;
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.142857;
+  }
 }
 
 .x-small-text {
-	font-size: 13px;
-	line-height: 18px;
-	h1, h2, h3, h4, h5, h6 {
-		line-height: 1.230769;
-	}
+  font-size: 13px;
+  line-height: 18px;
+  h1, h2, h3, h4, h5, h6 {
+    line-height: 1.230769;
+  }
 }
 
 .dense-text {
-    line-height: 18px;
+  line-height: 18px;
 }
 
 a:link {
-	color: $action;
-	text-decoration: none;
+  color: $action;
+  text-decoration: none;
 }
 a:visited {
-	color: $link-visited-color;
+  color: $link-visited-color;
 }
 a:hover {
-	color: $link-hover-color;
+  color: $link-hover-color;
 }
 
 hr {
-    height: 0;
-    border-style: solid none none;
-    border-width: 1px 0 0;
-    border-color: #e3e3e3;
-    box-shadow: none;
-    margin: 1em 0;
-    width: 100%;
-    clear: both;
+  height: 0;
+  border-style: solid none none;
+  border-width: 1px 0 0;
+  border-color: #e3e3e3;
+  box-shadow: none;
+  margin: 1em 0;
+  width: 100%;
+  clear: both;
 }
 
 hr.blur {
-    border: 0;
-    height: 3px;
-    @include box-shadow (none);
-    background: linear-gradient(left, transparent, rgba(0,0,0,0.1), transparent);
+  border: 0;
+  height: 3px;
+  @include box-shadow (none);
+  background: linear-gradient(left, transparent, rgba(0,0,0,0.1), transparent);
 }
 input, select, textarea, button {
-	border: 0;
+  border: 0;
 }
 
 input::-moz-focus-inner,
 button::-moz-focus-inner /*Remove button padding in FF*/
 {
-    border: 0;
-    padding: 0;
+  border: 0;
+  padding: 0;
 }
 
 select.styled {
-	-webkit-appearance: none;
-	background: $white image-url('select_arrow.png') no-repeat right center;
-	width: 150px;
+  -webkit-appearance: none;
+  background: $white image-url('select_arrow.png') no-repeat right center;
+  width: 150px;
 }
 
 .rightText {
@@ -223,27 +224,27 @@ dl {
 }
 
 pre, code, tt {
-	font-family: "Ubuntu Mono", monospace;
-    font-weight: 700;
-    color: lighten( $slate, 4 );
+  font-family: "Ubuntu Mono", monospace;
+  font-weight: 700;
+  color: $gray-darker;
 }
 
 .code-callout {
-	color: #CB4B16;
-	font-size: 13px;
-	background: #fbfbfb;
-	border: 1px solid rgba(0,0,0,0.1);
-	border-radius: 3px;
-	padding: 2px 4px;
+  color: #CB4B16;
+  font-size: 13px;
+  background: #fbfbfb;
+  border: 1px solid rgba(0,0,0,0.1);
+  border-radius: 3px;
+  padding: 2px 4px;
 }
 
 .secondary {
-    font-size: 90%;
-    color: $gray;
+  font-size: 90%;
+  color: $gray;
 }
 
 .truncate-text {
-    white-space: nowrap;
-    overflow-x: hidden;
-    text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
 }
