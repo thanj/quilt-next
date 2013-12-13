@@ -397,6 +397,7 @@ th.hide-for-touch { display: table-cell !important; }
         float: none;
         height: 100%;
         min-height: 100%;
+        max-height: 100%;
         width: 300%;
         max-width: 300px;
         position: absolute;
@@ -511,6 +512,7 @@ th.hide-for-touch { display: table-cell !important; }
     }
     .sidebar_col {
         min-height: calc(100% - 45px);
+        max-height: calc(100% - 45px);
         position: fixed;
     }
     .body_col {
