@@ -55,12 +55,51 @@ $providersBGNeeded: {{#each providers}}{{#if this.logo.transparent}}{{@key}} {{/
 		@include border-radius (#{$radius}px);
 	}
 }
+@mixin provider-hex($side, $background) {
+
+  $width: 1.4142 * $side;
+  $halfwidth: $width / 2;
+  $halfside: $side - $halfwidth;
+
+  margin-top: $halfside;
+  width: $width;
+  height: $side;
+  background-color: $background;
+  position: relative;
+
+  &:before {
+      content: " ";
+      width: 0; height: 0;
+      left: 0;
+      border-bottom: $halfside solid $background;
+      border-left: $halfwidth solid transparent;
+      border-right: $halfwidth solid transparent;
+      position: absolute;
+      top: -$halfside;
+  }
+
+  &:after {
+      content: "";
+      width: 0;
+      position: absolute;
+      bottom: -$halfside;
+      left: 0;
+      border-top: $halfside solid $background;
+      border-left: $halfwidth solid transparent;
+      border-right: $halfwidth solid transparent;
+  }
+
+}
+
 // Provides provider color to text, links, btns and bgs
 // Loaded from config file `providers-vars.json`; add new colors there
 {{#each providers}}
     .janrain-provider-bg-color-{{@key}} {
         background-color: #{{this.background}};
 	}
+  .janrain-provider-hex-{{@key}} {
+      @include provider-hex( 40px, #{{this.background}} );
+  }
     .janrain-provider-text-color-{{@key}} {
         color: #{{this.text}} !important;
 	}

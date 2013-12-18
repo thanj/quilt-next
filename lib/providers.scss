@@ -2,8 +2,8 @@
 @import "_mixins.scss";
 @import "_variables";
 
-$providers: janrain placeholder email fimnet medikey doccheck onekey mydigipass xing vk myopenid mixi livejournal aol amazon openid googleplus google facebook twitter myspace instagram disqus microsoftaccount live_id yahoo netlog flickr blogger verisign wordpress hyves linkedin paypal salesforce orkut vzn tumblr foursquare sinaweibo renren tencentweibo soundcloud ;
-$providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal aol amazon openid googleplus myspace netlog flickr verisign paypal orkut sinaweibo renren ;
+$providers: janrain placeholder email fimnet medikey doccheck onekey mydigipass xing vk myopenid mixi livejournal aol amazon openid googleplus google facebook twitter myspace instagram disqus microsoftaccount live_id yahoo netlog flickr blogger verisign wordpress hyves linkedin paypal salesforce orkut vzn tumblr foursquare sinaweibo renren tencentweibo soundcloud samltest ;
+$providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal aol amazon openid googleplus myspace netlog flickr verisign paypal orkut sinaweibo renren samltest ;
 
 // Produces icon classes including transparent and grayscale.
 // Provider name is required to generate class and locate correct asset.
@@ -55,12 +55,51 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
 		@include border-radius (#{$radius}px);
 	}
 }
+@mixin provider-hex($side, $background) {
+
+  $width: 1.4142 * $side;
+  $halfwidth: $width / 2;
+  $halfside: $side - $halfwidth;
+
+  margin-top: $halfside;
+  width: $width;
+  height: $side;
+  background-color: $background;
+  position: relative;
+
+  &:before {
+      content: " ";
+      width: 0; height: 0;
+      left: 0;
+      border-bottom: $halfside solid $background;
+      border-left: $halfwidth solid transparent;
+      border-right: $halfwidth solid transparent;
+      position: absolute;
+      top: -$halfside;
+  }
+
+  &:after {
+      content: "";
+      width: 0;
+      position: absolute;
+      bottom: -$halfside;
+      left: 0;
+      border-top: $halfside solid $background;
+      border-left: $halfwidth solid transparent;
+      border-right: $halfwidth solid transparent;
+  }
+
+}
+
 // Provides provider color to text, links, btns and bgs
 // Loaded from config file `providers-vars.json`; add new colors there
 
     .janrain-provider-bg-color-janrain {
         background-color: #009DDC;
 	}
+  .janrain-provider-hex-janrain {
+      @include provider-hex( 40px, #009DDC );
+  }
     .janrain-provider-text-color-janrain {
         color: #009DDC !important;
 	}
@@ -74,6 +113,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-placeholder {
         background-color: #999;
 	}
+  .janrain-provider-hex-placeholder {
+      @include provider-hex( 40px, #999 );
+  }
     .janrain-provider-text-color-placeholder {
         color: #999 !important;
 	}
@@ -87,6 +129,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-email {
         background-color: #009DDC;
 	}
+  .janrain-provider-hex-email {
+      @include provider-hex( 40px, #009DDC );
+  }
     .janrain-provider-text-color-email {
         color: #009DDC !important;
 	}
@@ -100,6 +145,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-fimnet {
         background-color: #33679A;
 	}
+  .janrain-provider-hex-fimnet {
+      @include provider-hex( 40px, #33679A );
+  }
     .janrain-provider-text-color-fimnet {
         color: #33679A !important;
 	}
@@ -113,6 +161,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-medikey {
         background-color: #5192CA;
 	}
+  .janrain-provider-hex-medikey {
+      @include provider-hex( 40px, #5192CA );
+  }
     .janrain-provider-text-color-medikey {
         color: #5192CA !important;
 	}
@@ -126,6 +177,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-doccheck {
         background-color: #CC0033;
 	}
+  .janrain-provider-hex-doccheck {
+      @include provider-hex( 40px, #CC0033 );
+  }
     .janrain-provider-text-color-doccheck {
         color: #000000 !important;
 	}
@@ -139,6 +193,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-onekey {
         background-color: #C41166;
 	}
+  .janrain-provider-hex-onekey {
+      @include provider-hex( 40px, #C41166 );
+  }
     .janrain-provider-text-color-onekey {
         color: #C41166 !important;
 	}
@@ -152,6 +209,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-mydigipass {
         background-color: #3F464B;
 	}
+  .janrain-provider-hex-mydigipass {
+      @include provider-hex( 40px, #3F464B );
+  }
     .janrain-provider-text-color-mydigipass {
         color: #3F464B !important;
 	}
@@ -165,6 +225,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-xing {
         background-color: #006567;
 	}
+  .janrain-provider-hex-xing {
+      @include provider-hex( 40px, #006567 );
+  }
     .janrain-provider-text-color-xing {
         color: #006567 !important;
 	}
@@ -178,6 +241,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-vk {
         background-color: #45668E;
 	}
+  .janrain-provider-hex-vk {
+      @include provider-hex( 40px, #45668E );
+  }
     .janrain-provider-text-color-vk {
         color: #45668E !important;
 	}
@@ -191,6 +257,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-myopenid {
         background-color: #20499D;
 	}
+  .janrain-provider-hex-myopenid {
+      @include provider-hex( 40px, #20499D );
+  }
     .janrain-provider-text-color-myopenid {
         color: #20499D !important;
 	}
@@ -204,6 +273,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-mixi {
         background-color: #D1AD5A;
 	}
+  .janrain-provider-hex-mixi {
+      @include provider-hex( 40px, #D1AD5A );
+  }
     .janrain-provider-text-color-mixi {
         color: #D1AD5A !important;
 	}
@@ -217,6 +289,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-livejournal {
         background-color: #2B5889;
 	}
+  .janrain-provider-hex-livejournal {
+      @include provider-hex( 40px, #2B5889 );
+  }
     .janrain-provider-text-color-livejournal {
         color: #2B5889 !important;
 	}
@@ -230,6 +305,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-aol {
         background-color: #000;
 	}
+  .janrain-provider-hex-aol {
+      @include provider-hex( 40px, #000 );
+  }
     .janrain-provider-text-color-aol {
         color: #000 !important;
 	}
@@ -243,6 +321,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-amazon {
         background-color: #FF9900;
 	}
+  .janrain-provider-hex-amazon {
+      @include provider-hex( 40px, #FF9900 );
+  }
     .janrain-provider-text-color-amazon {
         color: #000 !important;
 	}
@@ -256,6 +337,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-openid {
         background-color: #F8921C;
 	}
+  .janrain-provider-hex-openid {
+      @include provider-hex( 40px, #F8921C );
+  }
     .janrain-provider-text-color-openid {
         color: #F8921C !important;
 	}
@@ -269,6 +353,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-googleplus {
         background-color: #CC3732;
 	}
+  .janrain-provider-hex-googleplus {
+      @include provider-hex( 40px, #CC3732 );
+  }
     .janrain-provider-text-color-googleplus {
         color: #737373 !important;
 	}
@@ -282,6 +369,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-google {
         background-color: #61A6FB;
 	}
+  .janrain-provider-hex-google {
+      @include provider-hex( 40px, #61A6FB );
+  }
     .janrain-provider-text-color-google {
         color: #61A6FB !important;
 	}
@@ -295,6 +385,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-facebook {
         background-color: #3B5998;
 	}
+  .janrain-provider-hex-facebook {
+      @include provider-hex( 40px, #3B5998 );
+  }
     .janrain-provider-text-color-facebook {
         color: #3B5998 !important;
 	}
@@ -308,6 +401,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-twitter {
         background-color: #27C9FF;
 	}
+  .janrain-provider-hex-twitter {
+      @include provider-hex( 40px, #27C9FF );
+  }
     .janrain-provider-text-color-twitter {
         color: #27C9FF !important;
 	}
@@ -321,6 +417,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-myspace {
         background-color: #000;
 	}
+  .janrain-provider-hex-myspace {
+      @include provider-hex( 40px, #000 );
+  }
     .janrain-provider-text-color-myspace {
         color: #000 !important;
 	}
@@ -334,6 +433,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-instagram {
         background-color: #517FA4;
 	}
+  .janrain-provider-hex-instagram {
+      @include provider-hex( 40px, #517FA4 );
+  }
     .janrain-provider-text-color-instagram {
         color: #517FA4 !important;
 	}
@@ -347,6 +449,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-disqus {
         background-color: #2E9FFF;
 	}
+  .janrain-provider-hex-disqus {
+      @include provider-hex( 40px, #2E9FFF );
+  }
     .janrain-provider-text-color-disqus {
         color: #2E9FFF !important;
 	}
@@ -360,6 +465,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-microsoftaccount {
         background-color: #3E73B4;
 	}
+  .janrain-provider-hex-microsoftaccount {
+      @include provider-hex( 40px, #3E73B4 );
+  }
     .janrain-provider-text-color-microsoftaccount {
         color: #3E73B4 !important;
 	}
@@ -373,6 +481,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-live_id {
         background-color: #3E73B4;
 	}
+  .janrain-provider-hex-live_id {
+      @include provider-hex( 40px, #3E73B4 );
+  }
     .janrain-provider-text-color-live_id {
         color: #3E73B4 !important;
 	}
@@ -386,6 +497,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-yahoo {
         background-color: #670267;
 	}
+  .janrain-provider-hex-yahoo {
+      @include provider-hex( 40px, #670267 );
+  }
     .janrain-provider-text-color-yahoo {
         color: #670267 !important;
 	}
@@ -399,6 +513,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-netlog {
         background-color: #000;
 	}
+  .janrain-provider-hex-netlog {
+      @include provider-hex( 40px, #000 );
+  }
     .janrain-provider-text-color-netlog {
         color: #000 !important;
 	}
@@ -412,6 +529,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-flickr {
         background-color: #0063DB;
 	}
+  .janrain-provider-hex-flickr {
+      @include provider-hex( 40px, #0063DB );
+  }
     .janrain-provider-text-color-flickr {
         color: #0063DB !important;
 	}
@@ -425,6 +545,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-blogger {
         background-color: #F7931E;
 	}
+  .janrain-provider-hex-blogger {
+      @include provider-hex( 40px, #F7931E );
+  }
     .janrain-provider-text-color-blogger {
         color: #F7931E !important;
 	}
@@ -438,6 +561,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-verisign {
         background-color: #FFC10C;
 	}
+  .janrain-provider-hex-verisign {
+      @include provider-hex( 40px, #FFC10C );
+  }
     .janrain-provider-text-color-verisign {
         color: #FFC10C !important;
 	}
@@ -451,6 +577,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-wordpress {
         background-color: #21759B;
 	}
+  .janrain-provider-hex-wordpress {
+      @include provider-hex( 40px, #21759B );
+  }
     .janrain-provider-text-color-wordpress {
         color: #21759B !important;
 	}
@@ -464,6 +593,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-hyves {
         background-color: #FFAA00;
 	}
+  .janrain-provider-hex-hyves {
+      @include provider-hex( 40px, #FFAA00 );
+  }
     .janrain-provider-text-color-hyves {
         color: #FFAA00 !important;
 	}
@@ -477,6 +609,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-linkedin {
         background-color: #005A87;
 	}
+  .janrain-provider-hex-linkedin {
+      @include provider-hex( 40px, #005A87 );
+  }
     .janrain-provider-text-color-linkedin {
         color: #005A87 !important;
 	}
@@ -490,6 +625,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-paypal {
         background-color: #1F356F;
 	}
+  .janrain-provider-hex-paypal {
+      @include provider-hex( 40px, #1F356F );
+  }
     .janrain-provider-text-color-paypal {
         color: #1F356F !important;
 	}
@@ -503,6 +641,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-salesforce {
         background-color: #333;
 	}
+  .janrain-provider-hex-salesforce {
+      @include provider-hex( 40px, #333 );
+  }
     .janrain-provider-text-color-salesforce {
         color: #333 !important;
 	}
@@ -516,6 +657,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-orkut {
         background-color: #B90C91;
 	}
+  .janrain-provider-hex-orkut {
+      @include provider-hex( 40px, #B90C91 );
+  }
     .janrain-provider-text-color-orkut {
         color: #B90C91 !important;
 	}
@@ -529,6 +673,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-vzn {
         background-color: #EE0000;
 	}
+  .janrain-provider-hex-vzn {
+      @include provider-hex( 40px, #EE0000 );
+  }
     .janrain-provider-text-color-vzn {
         color: #EE0000 !important;
 	}
@@ -542,6 +689,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-tumblr {
         background-color: #31516F;
 	}
+  .janrain-provider-hex-tumblr {
+      @include provider-hex( 40px, #31516F );
+  }
     .janrain-provider-text-color-tumblr {
         color: #31516F !important;
 	}
@@ -555,6 +705,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-foursquare {
         background-color: #1769B4;
 	}
+  .janrain-provider-hex-foursquare {
+      @include provider-hex( 40px, #1769B4 );
+  }
     .janrain-provider-text-color-foursquare {
         color: #1769B4 !important;
 	}
@@ -568,6 +721,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-sinaweibo {
         background-color: #D72829;
 	}
+  .janrain-provider-hex-sinaweibo {
+      @include provider-hex( 40px, #D72829 );
+  }
     .janrain-provider-text-color-sinaweibo {
         color: #D72829 !important;
 	}
@@ -581,6 +737,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-renren {
         background-color: #005EAC;
 	}
+  .janrain-provider-hex-renren {
+      @include provider-hex( 40px, #005EAC );
+  }
     .janrain-provider-text-color-renren {
         color: #005EAC !important;
 	}
@@ -594,6 +753,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-tencentweibo {
         background-color: #20B8E5;
 	}
+  .janrain-provider-hex-tencentweibo {
+      @include provider-hex( 40px, #20B8E5 );
+  }
     .janrain-provider-text-color-tencentweibo {
         color: #20B8E5 !important;
 	}
@@ -607,6 +769,9 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
     .janrain-provider-bg-color-soundcloud {
         background-color: #FF4C13;
 	}
+  .janrain-provider-hex-soundcloud {
+      @include provider-hex( 40px, #FF4C13 );
+  }
     .janrain-provider-text-color-soundcloud {
         color: #FF4C13 !important;
 	}
@@ -614,6 +779,22 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
         color: #FF4C13 !important;
 		&:hover {
             color: darken(#FF4C13, 15) !important;
+		}
+	}
+
+    .janrain-provider-bg-color-samltest {
+        background-color: #FF6500;
+	}
+  .janrain-provider-hex-samltest {
+      @include provider-hex( 40px, #FF6500 );
+  }
+    .janrain-provider-text-color-samltest {
+        color: #000000 !important;
+	}
+    a.janrain-provider-text-color-samltest {
+        color: #000000 !important;
+		&:hover {
+            color: darken(#000000, 15) !important;
 		}
 	}
 

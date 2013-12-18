@@ -429,6 +429,16 @@ onProviderConfigLoaded(
     "displayname": "SoundCloud",
     "background": "FF4C13",
     "text": "FF4C13"
+  },
+  "samltest": {
+    "logo": {
+      "transparent": true,
+      "filename": "samltest.png"
+    },
+    "buttontext": "SAML Test",
+    "displayname": "SAML Test",
+    "background": "FF6500",
+    "text": "000000"
   }
 }
 );
