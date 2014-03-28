@@ -639,18 +639,18 @@ $providersBGNeeded: fimnet medikey onekey mydigipass myopenid mixi livejournal a
 	}
 
     .janrain-provider-bg-color-salesforce {
-        background-color: #333;
+        background-color: #E98300;
 	}
   .janrain-provider-hex-salesforce {
-      @include provider-hex( 40px, #333 );
+      @include provider-hex( 40px, #E98300 );
   }
     .janrain-provider-text-color-salesforce {
-        color: #333 !important;
+        color: #E98300 !important;
 	}
     a.janrain-provider-text-color-salesforce {
-        color: #333 !important;
+        color: #E98300 !important;
 		&:hover {
-            color: darken(#333, 15) !important;
+            color: darken(#E98300, 15) !important;
 		}
 	}
 
