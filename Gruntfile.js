@@ -35,6 +35,27 @@ module.exports = function(grunt) {
       }
     },
 
+
+    webfont: {
+      icons: {
+        src: 'assets/icons/*.svg',
+        dest: 'fonts',
+        template: 'assets/icons/icon-font.css',
+        options: {
+          font: 'quilt-icons',
+          stylesheet: 'scss',
+          syntax: 'bootstrap',
+          relativeFontPath: '../fonts',
+          htmlDemo: false
+        },
+        templateOptions: {
+          baseClass: 'janrain-',
+          classPrefix: 'quilt-icon-',
+          types: 'eot,woff,ttf,svg'
+        }
+      }
+    },
+
     concat: {
       options: {
         banner: '<%= banner %><%= jqueryCheck %>',
@@ -168,6 +189,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-imagemagick');
   grunt.loadNpmTasks('grunt-contrib-clean');
   grunt.loadNpmTasks('grunt-contrib-concat');
+  grunt.loadNpmTasks('grunt-webfont');
   grunt.loadNpmTasks('grunt-contrib-copy');
   grunt.loadNpmTasks('grunt-contrib-jshint');
   grunt.loadNpmTasks('grunt-contrib-qunit');
