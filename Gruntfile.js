@@ -40,19 +40,19 @@ module.exports = function(grunt) {
       icons: {
         src: 'assets/icons/*.svg',
         dest: 'fonts',
-        template: 'assets/icons/icon-font.css',
         options: {
           font: 'quilt-icons',
           stylesheet: 'scss',
           syntax: 'bootstrap',
           relativeFontPath: '../fonts',
-          htmlDemo: false
+          htmlDemo: false,
+
+          templateOptions: {
+            baseClass: 'quilt-icon',
+            classPrefix: 'quilt-icon-',
+            types: 'eot,woff,ttf,svg'
+          }
         },
-        templateOptions: {
-          baseClass: 'janrain-',
-          classPrefix: 'quilt-icon-',
-          types: 'eot,woff,ttf,svg'
-        }
       }
     },
 
