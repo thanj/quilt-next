@@ -429,7 +429,7 @@ th.hide-for-touch { display: table-cell !important; }
 
     body.focused-mobile-nav {
         margin: 0 -300px 0 300px;
-        .sidebar_col { left: -300px; }
+        .sidebar_col { left: 0px; }
     }
 
     .nav-assist.focused-search {
