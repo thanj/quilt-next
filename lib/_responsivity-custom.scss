@@ -18,6 +18,10 @@ $small-screen: 768px;
 $medium-screen: 1280px;
 $large-screen: 1440px;
 
+$small_screen_minus_one: $small_screen - 1;
+$medium_screen_minus_one: $small_screen - 1;
+$large_screen_minus_one: $small_screen - 1;
+
 $screen: "only screen";
 $small: "only screen and (min-width: #{$small-screen})";
 $medium: "only screen and (min-width: #{$medium-screen})";
@@ -342,7 +346,7 @@ th.hide-for-touch { display: table-cell !important; }
 .touch th.show-for-touch { display: table-cell !important; }
 
 
-@media only screen and (max-width:"#{$small-screen}") {
+@media only screen and (max-width:"#{$small-screen_minus_one}") {
     .global_nav {
         position: fixed;
         width: 180px;
